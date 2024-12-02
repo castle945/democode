@@ -1,0 +1,44 @@
+2023年 02月 08日 星期三 16:29:57 CST
+Files already downloaded and verified
+Files already downloaded and verified
+epoch 1, loss sum 356.840, train acc 0.346, test acc 0.461
+epoch 2, loss sum 277.693, train acc 0.487, test acc 0.531
+epoch 3, loss sum 232.872, train acc 0.573, test acc 0.560
+epoch 4, loss sum 207.513, train acc 0.623, test acc 0.634
+epoch 5, loss sum 183.701, train acc 0.668, test acc 0.696
+epoch 6, loss sum 170.384, train acc 0.694, test acc 0.714
+epoch 7, loss sum 157.622, train acc 0.718, test acc 0.706
+epoch 8, loss sum 147.377, train acc 0.740, test acc 0.742
+epoch 9, loss sum 139.511, train acc 0.753, test acc 0.747
+epoch 10, loss sum 133.660, train acc 0.763, test acc 0.760
+epoch 11, loss sum 127.503, train acc 0.773, test acc 0.760
+epoch 12, loss sum 123.750, train acc 0.780, test acc 0.769
+epoch 13, loss sum 116.423, train acc 0.793, test acc 0.777
+epoch 14, loss sum 112.333, train acc 0.802, test acc 0.781
+epoch 15, loss sum 108.179, train acc 0.808, test acc 0.781
+epoch 16, loss sum 104.903, train acc 0.815, test acc 0.787
+epoch 17, loss sum 102.961, train acc 0.816, test acc 0.790
+epoch 18, loss sum 100.716, train acc 0.821, test acc 0.797
+epoch 19, loss sum 96.201, train acc 0.831, test acc 0.809
+epoch 20, loss sum 94.556, train acc 0.835, test acc 0.752
+epoch 21, loss sum 125.771, train acc 0.780, test acc 0.801
+epoch 22, loss sum 93.153, train acc 0.836, test acc 0.802
+epoch 23, loss sum 89.461, train acc 0.841, test acc 0.808
+epoch 24, loss sum 86.671, train acc 0.846, test acc 0.818
+epoch 25, loss sum 83.923, train acc 0.851, test acc 0.819
+epoch 26, loss sum 81.377, train acc 0.855, test acc 0.816
+epoch 27, loss sum 79.479, train acc 0.860, test acc 0.825
+epoch 28, loss sum 76.442, train acc 0.865, test acc 0.817
+epoch 29, loss sum 74.993, train acc 0.866, test acc 0.821
+epoch 30, loss sum 74.401, train acc 0.867, test acc 0.825
+epoch 31, loss sum 72.848, train acc 0.869, test acc 0.827
+epoch 32, loss sum 71.675, train acc 0.872, test acc 0.819
+epoch 33, loss sum 69.855, train acc 0.874, test acc 0.827
+epoch 34, loss sum 68.193, train acc 0.879, test acc 0.821
+epoch 35, loss sum 66.506, train acc 0.881, test acc 0.831
+epoch 36, loss sum 65.681, train acc 0.882, test acc 0.836
+epoch 37, loss sum 64.148, train acc 0.884, test acc 0.826
+epoch 38, loss sum 61.602, train acc 0.890, test acc 0.834
+epoch 39, loss sum 62.612, train acc 0.890, test acc 0.828
+epoch 40, loss sum 61.023, train acc 0.890, test acc 0.825
+2023年 02月 08日 星期三 16:32:08 CST

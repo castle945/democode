@@ -1,0 +1,16 @@
+
+
+| Name         | Config                                                                | Result                                      | Conclusion                                                                                                                                             |
+| ------------ | --------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| MNIST        |                                                                       |                                             |                                                                                                                                                        |
+| baseline     | sigmoid channel=16 linear=120,84 batch_size=256 lr=0.001 max_epoch=20 | train acc 0.978, test acc 0.977 converge 14 |                                                                                                                                                        |
+|              | lr=0.01                                                               | train acc 0.987, test acc 0.985 converge 4  | 损失和准确率连续几轮变化不大认为收敛，加大学习率会加快收敛，需要早停否则轮数太多过拟合；过拟合时损失下降，训练准确率微小提升，测试准确率不提升或下降； |
+|              | relu                                                                  | train acc 0.982, test acc 0.978 converge 7  | Relu 比 Sigmoid 收敛快                                                                                                                                 |
+|              | channel=8                                                             | train acc 0.976, test acc 0.976 converge 17 | 基本无差别                                                                                                                                             |
+|              | channel=64                                                            | train acc 0.982, test acc 0.981 converge 9  | 提升模型拟合能力，收敛速度加快，过拟合                                                                                                                 |
+|              | channel=128                                                           | train acc 0.984, test acc 0.982 converge 8  | 提升模型拟合能力，收敛速度加快，过拟合，就是说拟合能力强收敛快了点，终究就过拟合                                                                       |
+|              | linear=512,128                                                        | train acc 0.984, test acc 0.984 converge 12 | 提升模型拟合能力，收敛速度加快，过拟合                                                                                                                 |
+| FashionMNIST |                                                                       |                                             |                                                                                                                                                        |
+| baseline     | batch_size=256 lr=0.01 max_epoch=20                                   | train acc 0.881, test acc 0.874 converge 6  | 先用大学习率合适的轮次调到过拟合，再减学习率精调到轮次结束差不多收敛                                                                                                                                                       |
+
+

@@ -1,0 +1,1200 @@
+2023年 02月 08日 星期三 16:34:23 CST
+Files already downloaded and verified
+Files already downloaded and verified
+02/08 16:34:25 - mmengine - INFO - 
+------------------------------------------------------------
+System environment:
+    sys.platform: linux
+    Python: 3.7.11 (default, Jul 27 2021, 14:32:16) [GCC 7.5.0]
+    CUDA available: True
+    numpy_random_seed: 25177517
+    GPU 0: NVIDIA GeForce RTX 3090 Ti
+    CUDA_HOME: /usr/local/cuda
+    NVCC: Cuda compilation tools, release 11.1, V11.1.105
+    GCC: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+    PyTorch: 1.10.0
+    PyTorch compiling details: PyTorch built with:
+  - GCC 7.3
+  - C++ Version: 201402
+  - Intel(R) oneAPI Math Kernel Library Version 2021.4-Product Build 20210904 for Intel(R) 64 architecture applications
+  - Intel(R) MKL-DNN v2.2.3 (Git Hash 7336ca9f055cf1bfa13efb658fe15dc9b41f0740)
+  - OpenMP 201511 (a.k.a. OpenMP 4.5)
+  - LAPACK is enabled (usually provided by MKL)
+  - NNPACK is enabled
+  - CPU capability usage: AVX2
+  - CUDA Runtime 11.1
+  - NVCC architecture flags: -gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_70,code=sm_70;-gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_37,code=compute_37
+  - CuDNN 8.0.5
+  - Magma 2.5.2
+  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, CUDA_VERSION=11.1, CUDNN_VERSION=8.0.5, CXX_COMPILER=/opt/rh/devtoolset-7/root/usr/bin/c++, CXX_FLAGS= -Wno-deprecated -fvisibility-inlines-hidden -DUSE_PTHREADPOOL -fopenmp -DNDEBUG -DUSE_KINETO -DUSE_FBGEMM -DUSE_QNNPACK -DUSE_PYTORCH_QNNPACK -DUSE_XNNPACK -DSYMBOLICATE_MOBILE_DEBUG_HANDLE -DEDGE_PROFILER_USE_KINETO -O2 -fPIC -Wno-narrowing -Wall -Wextra -Werror=return-type -Wno-missing-field-initializers -Wno-type-limits -Wno-array-bounds -Wno-unknown-pragmas -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wno-unused-function -Wno-unused-result -Wno-unused-local-typedefs -Wno-strict-overflow -Wno-strict-aliasing -Wno-error=deprecated-declarations -Wno-stringop-overflow -Wno-psabi -Wno-error=pedantic -Wno-error=redundant-decls -Wno-error=old-style-cast -fdiagnostics-color=always -faligned-new -Wno-unused-but-set-variable -Wno-maybe-uninitialized -fno-math-errno -fno-trapping-math -Werror=format -Wno-stringop-overflow, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, PERF_WITH_AVX512=1, TORCH_VERSION=1.10.0, USE_CUDA=ON, USE_CUDNN=ON, USE_EXCEPTION_PTR=1, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=ON, USE_NNPACK=ON, USE_OPENMP=ON, 
+
+    TorchVision: 0.11.1
+    OpenCV: 4.7.0
+    MMEngine: 0.4.0
+
+Runtime environment:
+    dist_cfg: {'backend': 'nccl'}
+    seed: None
+    Distributed launcher: none
+    Distributed training: False
+    GPU number: 1
+------------------------------------------------------------
+
+02/08 16:34:25 - mmengine - INFO - Config:
+
+
+02/08 16:34:26 - mmengine - INFO - Distributed training is not used, all SyncBatchNorm (SyncBN) layers in the model will be automatically reverted to BatchNormXd layers if they are used.
+02/08 16:34:26 - mmengine - INFO - Hooks will be executed in the following order:
+before_run:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+before_train:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_train_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(NORMAL      ) DistSamplerSeedHook                
+ -------------------- 
+before_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_train_iter:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+after_train_epoch:
+(NORMAL      ) IterTimerHook                      
+(LOW         ) ParamSchedulerHook                 
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_val_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_val_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_val_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_val_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+(VERY_LOW    ) CheckpointHook                     
+ -------------------- 
+before_test_epoch:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+before_test_iter:
+(NORMAL      ) IterTimerHook                      
+ -------------------- 
+after_test_iter:
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_test_epoch:
+(VERY_HIGH   ) RuntimeInfoHook                    
+(NORMAL      ) IterTimerHook                      
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+after_run:
+(BELOW_NORMAL) LoggerHook                         
+ -------------------- 
+02/08 16:34:26 - mmengine - INFO - Checkpoints will be saved to /root/work/deeplearning/mmengine/work_dirs.
+02/08 16:34:27 - mmengine - INFO - Epoch(train)  [1][ 10/196]  lr: 8.0000e-03  eta: 0:09:08  time: 0.0700  data_time: 0.0217  memory: 364  loss: 3.2843
+02/08 16:34:27 - mmengine - INFO - Epoch(train)  [1][ 20/196]  lr: 8.0000e-03  eta: 0:06:44  time: 0.0333  data_time: 0.0206  memory: 364  loss: 2.1551
+02/08 16:34:28 - mmengine - INFO - Epoch(train)  [1][ 30/196]  lr: 8.0000e-03  eta: 0:05:56  time: 0.0335  data_time: 0.0208  memory: 364  loss: 2.0688
+02/08 16:34:28 - mmengine - INFO - Epoch(train)  [1][ 40/196]  lr: 8.0000e-03  eta: 0:05:32  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.9088
+02/08 16:34:28 - mmengine - INFO - Epoch(train)  [1][ 50/196]  lr: 8.0000e-03  eta: 0:05:21  time: 0.0362  data_time: 0.0235  memory: 364  loss: 1.8795
+02/08 16:34:29 - mmengine - INFO - Epoch(train)  [1][ 60/196]  lr: 8.0000e-03  eta: 0:05:11  time: 0.0339  data_time: 0.0211  memory: 364  loss: 1.8676
+02/08 16:34:29 - mmengine - INFO - Epoch(train)  [1][ 70/196]  lr: 8.0000e-03  eta: 0:05:04  time: 0.0337  data_time: 0.0210  memory: 364  loss: 1.7684
+02/08 16:34:29 - mmengine - INFO - Epoch(train)  [1][ 80/196]  lr: 8.0000e-03  eta: 0:04:58  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.7637
+02/08 16:34:30 - mmengine - INFO - Epoch(train)  [1][ 90/196]  lr: 8.0000e-03  eta: 0:04:53  time: 0.0338  data_time: 0.0210  memory: 364  loss: 1.7619
+02/08 16:34:30 - mmengine - INFO - Epoch(train)  [1][100/196]  lr: 8.0000e-03  eta: 0:04:50  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.7409
+02/08 16:34:30 - mmengine - INFO - Epoch(train)  [1][110/196]  lr: 8.0000e-03  eta: 0:04:46  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.6679
+02/08 16:34:31 - mmengine - INFO - Epoch(train)  [1][120/196]  lr: 8.0000e-03  eta: 0:04:44  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.6710
+02/08 16:34:31 - mmengine - INFO - Epoch(train)  [1][130/196]  lr: 8.0000e-03  eta: 0:04:42  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.6374
+02/08 16:34:31 - mmengine - INFO - Epoch(train)  [1][140/196]  lr: 8.0000e-03  eta: 0:04:39  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.6360
+02/08 16:34:32 - mmengine - INFO - Epoch(train)  [1][150/196]  lr: 8.0000e-03  eta: 0:04:38  time: 0.0338  data_time: 0.0211  memory: 364  loss: 1.6036
+02/08 16:34:32 - mmengine - INFO - Epoch(train)  [1][160/196]  lr: 8.0000e-03  eta: 0:04:36  time: 0.0334  data_time: 0.0207  memory: 364  loss: 1.6430
+02/08 16:34:32 - mmengine - INFO - Epoch(train)  [1][170/196]  lr: 8.0000e-03  eta: 0:04:35  time: 0.0334  data_time: 0.0206  memory: 364  loss: 1.5811
+02/08 16:34:33 - mmengine - INFO - Epoch(train)  [1][180/196]  lr: 8.0000e-03  eta: 0:04:33  time: 0.0339  data_time: 0.0211  memory: 364  loss: 1.5993
+02/08 16:34:33 - mmengine - INFO - Epoch(train)  [1][190/196]  lr: 8.0000e-03  eta: 0:04:32  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.5623
+02/08 16:34:33 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:34:33 - mmengine - INFO - Saving checkpoint at 1 epochs
+02/08 16:34:33 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:34:35 - mmengine - INFO - Epoch(val)  [1][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 364  
+02/08 16:34:35 - mmengine - INFO - Epoch(val)  [1][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 257  
+02/08 16:34:35 - mmengine - INFO - Epoch(val)  [1][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:34:35 - mmengine - INFO - Epoch(val)  [1][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0118  memory: 257  
+02/08 16:34:35 - mmengine - INFO - Epoch(val) [1][40/40]  accuracy: 44.1400
+02/08 16:34:35 - mmengine - INFO - Epoch(train)  [2][ 10/196]  lr: 8.0000e-03  eta: 0:04:30  time: 0.0336  data_time: 0.0209  memory: 364  loss: 1.5406
+02/08 16:34:36 - mmengine - INFO - Epoch(train)  [2][ 20/196]  lr: 8.0000e-03  eta: 0:04:29  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.5348
+02/08 16:34:36 - mmengine - INFO - Epoch(train)  [2][ 30/196]  lr: 8.0000e-03  eta: 0:04:28  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.4979
+02/08 16:34:36 - mmengine - INFO - Epoch(train)  [2][ 40/196]  lr: 8.0000e-03  eta: 0:04:27  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.5023
+02/08 16:34:37 - mmengine - INFO - Epoch(train)  [2][ 50/196]  lr: 8.0000e-03  eta: 0:04:26  time: 0.0339  data_time: 0.0211  memory: 364  loss: 1.4697
+02/08 16:34:37 - mmengine - INFO - Epoch(train)  [2][ 60/196]  lr: 8.0000e-03  eta: 0:04:25  time: 0.0334  data_time: 0.0206  memory: 364  loss: 1.4575
+02/08 16:34:37 - mmengine - INFO - Epoch(train)  [2][ 70/196]  lr: 8.0000e-03  eta: 0:04:24  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.4334
+02/08 16:34:38 - mmengine - INFO - Epoch(train)  [2][ 80/196]  lr: 8.0000e-03  eta: 0:04:24  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.4225
+02/08 16:34:38 - mmengine - INFO - Epoch(train)  [2][ 90/196]  lr: 8.0000e-03  eta: 0:04:23  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.4294
+02/08 16:34:38 - mmengine - INFO - Epoch(train)  [2][100/196]  lr: 8.0000e-03  eta: 0:04:22  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.4546
+02/08 16:34:39 - mmengine - INFO - Epoch(train)  [2][110/196]  lr: 8.0000e-03  eta: 0:04:21  time: 0.0336  data_time: 0.0209  memory: 364  loss: 1.3898
+02/08 16:34:39 - mmengine - INFO - Epoch(train)  [2][120/196]  lr: 8.0000e-03  eta: 0:04:21  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.3619
+02/08 16:34:39 - mmengine - INFO - Epoch(train)  [2][130/196]  lr: 8.0000e-03  eta: 0:04:20  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.3388
+02/08 16:34:40 - mmengine - INFO - Epoch(train)  [2][140/196]  lr: 8.0000e-03  eta: 0:04:19  time: 0.0336  data_time: 0.0208  memory: 364  loss: 1.3887
+02/08 16:34:40 - mmengine - INFO - Epoch(train)  [2][150/196]  lr: 8.0000e-03  eta: 0:04:19  time: 0.0334  data_time: 0.0206  memory: 364  loss: 1.3270
+02/08 16:34:40 - mmengine - INFO - Epoch(train)  [2][160/196]  lr: 8.0000e-03  eta: 0:04:18  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.3632
+02/08 16:34:41 - mmengine - INFO - Epoch(train)  [2][170/196]  lr: 8.0000e-03  eta: 0:04:18  time: 0.0335  data_time: 0.0207  memory: 364  loss: 1.3266
+02/08 16:34:41 - mmengine - INFO - Epoch(train)  [2][180/196]  lr: 8.0000e-03  eta: 0:04:17  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.2246
+02/08 16:34:41 - mmengine - INFO - Epoch(train)  [2][190/196]  lr: 8.0000e-03  eta: 0:04:17  time: 0.0340  data_time: 0.0212  memory: 364  loss: 1.3138
+02/08 16:34:42 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:34:42 - mmengine - INFO - Saving checkpoint at 2 epochs
+02/08 16:34:42 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:34:43 - mmengine - INFO - Epoch(val)  [2][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 364  
+02/08 16:34:43 - mmengine - INFO - Epoch(val)  [2][20/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:34:43 - mmengine - INFO - Epoch(val)  [2][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:34:43 - mmengine - INFO - Epoch(val)  [2][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0118  memory: 257  
+02/08 16:34:43 - mmengine - INFO - Epoch(val) [2][40/40]  accuracy: 51.6100
+02/08 16:34:44 - mmengine - INFO - Epoch(train)  [3][ 10/196]  lr: 8.0000e-03  eta: 0:04:16  time: 0.0339  data_time: 0.0211  memory: 364  loss: 1.2619
+02/08 16:34:44 - mmengine - INFO - Epoch(train)  [3][ 20/196]  lr: 8.0000e-03  eta: 0:04:15  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.2547
+02/08 16:34:44 - mmengine - INFO - Epoch(train)  [3][ 30/196]  lr: 8.0000e-03  eta: 0:04:14  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.2547
+02/08 16:34:45 - mmengine - INFO - Epoch(train)  [3][ 40/196]  lr: 8.0000e-03  eta: 0:04:14  time: 0.0335  data_time: 0.0207  memory: 364  loss: 1.2350
+02/08 16:34:45 - mmengine - INFO - Epoch(train)  [3][ 50/196]  lr: 8.0000e-03  eta: 0:04:14  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.2239
+02/08 16:34:45 - mmengine - INFO - Epoch(train)  [3][ 60/196]  lr: 8.0000e-03  eta: 0:04:13  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.1853
+02/08 16:34:46 - mmengine - INFO - Epoch(train)  [3][ 70/196]  lr: 8.0000e-03  eta: 0:04:13  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.3204
+02/08 16:34:46 - mmengine - INFO - Epoch(train)  [3][ 80/196]  lr: 8.0000e-03  eta: 0:04:12  time: 0.0334  data_time: 0.0206  memory: 364  loss: 1.2577
+02/08 16:34:46 - mmengine - INFO - Epoch(train)  [3][ 90/196]  lr: 8.0000e-03  eta: 0:04:12  time: 0.0333  data_time: 0.0205  memory: 364  loss: 1.1911
+02/08 16:34:47 - mmengine - INFO - Epoch(train)  [3][100/196]  lr: 8.0000e-03  eta: 0:04:11  time: 0.0336  data_time: 0.0209  memory: 364  loss: 1.2191
+02/08 16:34:47 - mmengine - INFO - Epoch(train)  [3][110/196]  lr: 8.0000e-03  eta: 0:04:11  time: 0.0334  data_time: 0.0207  memory: 364  loss: 1.1799
+02/08 16:34:47 - mmengine - INFO - Epoch(train)  [3][120/196]  lr: 8.0000e-03  eta: 0:04:10  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.1661
+02/08 16:34:48 - mmengine - INFO - Epoch(train)  [3][130/196]  lr: 8.0000e-03  eta: 0:04:10  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.1664
+02/08 16:34:48 - mmengine - INFO - Epoch(train)  [3][140/196]  lr: 8.0000e-03  eta: 0:04:09  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.1629
+02/08 16:34:48 - mmengine - INFO - Epoch(train)  [3][150/196]  lr: 8.0000e-03  eta: 0:04:09  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.1124
+02/08 16:34:49 - mmengine - INFO - Epoch(train)  [3][160/196]  lr: 8.0000e-03  eta: 0:04:09  time: 0.0365  data_time: 0.0238  memory: 364  loss: 1.0853
+02/08 16:34:49 - mmengine - INFO - Epoch(train)  [3][170/196]  lr: 8.0000e-03  eta: 0:04:08  time: 0.0337  data_time: 0.0210  memory: 364  loss: 1.1090
+02/08 16:34:50 - mmengine - INFO - Epoch(train)  [3][180/196]  lr: 8.0000e-03  eta: 0:04:08  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.1467
+02/08 16:34:50 - mmengine - INFO - Epoch(train)  [3][190/196]  lr: 8.0000e-03  eta: 0:04:08  time: 0.0338  data_time: 0.0210  memory: 364  loss: 1.1508
+02/08 16:34:50 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:34:50 - mmengine - INFO - Saving checkpoint at 3 epochs
+02/08 16:34:50 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:34:51 - mmengine - INFO - Epoch(val)  [3][10/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 364  
+02/08 16:34:52 - mmengine - INFO - Epoch(val)  [3][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0129  memory: 257  
+02/08 16:34:52 - mmengine - INFO - Epoch(val)  [3][30/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 257  
+02/08 16:34:52 - mmengine - INFO - Epoch(val)  [3][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:34:52 - mmengine - INFO - Epoch(val) [3][40/40]  accuracy: 57.1800
+02/08 16:34:52 - mmengine - INFO - Epoch(train)  [4][ 10/196]  lr: 8.0000e-03  eta: 0:04:07  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.1212
+02/08 16:34:53 - mmengine - INFO - Epoch(train)  [4][ 20/196]  lr: 8.0000e-03  eta: 0:04:06  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.1154
+02/08 16:34:53 - mmengine - INFO - Epoch(train)  [4][ 30/196]  lr: 8.0000e-03  eta: 0:04:06  time: 0.0348  data_time: 0.0220  memory: 364  loss: 1.0660
+02/08 16:34:53 - mmengine - INFO - Epoch(train)  [4][ 40/196]  lr: 8.0000e-03  eta: 0:04:06  time: 0.0335  data_time: 0.0207  memory: 364  loss: 1.0238
+02/08 16:34:54 - mmengine - INFO - Epoch(train)  [4][ 50/196]  lr: 8.0000e-03  eta: 0:04:05  time: 0.0335  data_time: 0.0208  memory: 364  loss: 1.0579
+02/08 16:34:54 - mmengine - INFO - Epoch(train)  [4][ 60/196]  lr: 8.0000e-03  eta: 0:04:05  time: 0.0338  data_time: 0.0211  memory: 364  loss: 1.0602
+02/08 16:34:54 - mmengine - INFO - Epoch(train)  [4][ 70/196]  lr: 8.0000e-03  eta: 0:04:04  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.0584
+02/08 16:34:55 - mmengine - INFO - Epoch(train)  [4][ 80/196]  lr: 8.0000e-03  eta: 0:04:04  time: 0.0333  data_time: 0.0206  memory: 364  loss: 1.0006
+02/08 16:34:55 - mmengine - INFO - Epoch(train)  [4][ 90/196]  lr: 8.0000e-03  eta: 0:04:04  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.0176
+02/08 16:34:55 - mmengine - INFO - Epoch(train)  [4][100/196]  lr: 8.0000e-03  eta: 0:04:03  time: 0.0334  data_time: 0.0207  memory: 364  loss: 1.0229
+02/08 16:34:56 - mmengine - INFO - Epoch(train)  [4][110/196]  lr: 8.0000e-03  eta: 0:04:03  time: 0.0333  data_time: 0.0205  memory: 364  loss: 0.9842
+02/08 16:34:56 - mmengine - INFO - Epoch(train)  [4][120/196]  lr: 8.0000e-03  eta: 0:04:02  time: 0.0336  data_time: 0.0208  memory: 364  loss: 1.0260
+02/08 16:34:56 - mmengine - INFO - Epoch(train)  [4][130/196]  lr: 8.0000e-03  eta: 0:04:02  time: 0.0332  data_time: 0.0205  memory: 364  loss: 1.0604
+02/08 16:34:57 - mmengine - INFO - Epoch(train)  [4][140/196]  lr: 8.0000e-03  eta: 0:04:01  time: 0.0333  data_time: 0.0205  memory: 364  loss: 1.0395
+02/08 16:34:57 - mmengine - INFO - Epoch(train)  [4][150/196]  lr: 8.0000e-03  eta: 0:04:01  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.9804
+02/08 16:34:57 - mmengine - INFO - Epoch(train)  [4][160/196]  lr: 8.0000e-03  eta: 0:04:01  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.9986
+02/08 16:34:58 - mmengine - INFO - Epoch(train)  [4][170/196]  lr: 8.0000e-03  eta: 0:04:00  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.9514
+02/08 16:34:58 - mmengine - INFO - Epoch(train)  [4][180/196]  lr: 8.0000e-03  eta: 0:04:00  time: 0.0337  data_time: 0.0209  memory: 364  loss: 1.0313
+02/08 16:34:58 - mmengine - INFO - Epoch(train)  [4][190/196]  lr: 8.0000e-03  eta: 0:04:00  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.9835
+02/08 16:34:58 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:34:58 - mmengine - INFO - Saving checkpoint at 4 epochs
+02/08 16:34:58 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:00 - mmengine - INFO - Epoch(val)  [4][10/40]    eta: 0:00:00  time: 0.0189  data_time: 0.0138  memory: 364  
+02/08 16:35:00 - mmengine - INFO - Epoch(val)  [4][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 257  
+02/08 16:35:00 - mmengine - INFO - Epoch(val)  [4][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 257  
+02/08 16:35:00 - mmengine - INFO - Epoch(val)  [4][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:35:00 - mmengine - INFO - Epoch(val) [4][40/40]  accuracy: 65.0200
+02/08 16:35:01 - mmengine - INFO - Epoch(train)  [5][ 10/196]  lr: 8.0000e-03  eta: 0:03:59  time: 0.0337  data_time: 0.0210  memory: 364  loss: 1.0093
+02/08 16:35:01 - mmengine - INFO - Epoch(train)  [5][ 20/196]  lr: 8.0000e-03  eta: 0:03:58  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.9857
+02/08 16:35:01 - mmengine - INFO - Epoch(train)  [5][ 30/196]  lr: 8.0000e-03  eta: 0:03:58  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.9819
+02/08 16:35:02 - mmengine - INFO - Epoch(train)  [5][ 40/196]  lr: 8.0000e-03  eta: 0:03:58  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.9538
+02/08 16:35:02 - mmengine - INFO - Epoch(train)  [5][ 50/196]  lr: 8.0000e-03  eta: 0:03:57  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.9870
+02/08 16:35:02 - mmengine - INFO - Epoch(train)  [5][ 60/196]  lr: 8.0000e-03  eta: 0:03:57  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.9862
+02/08 16:35:03 - mmengine - INFO - Epoch(train)  [5][ 70/196]  lr: 8.0000e-03  eta: 0:03:57  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.9338
+02/08 16:35:03 - mmengine - INFO - Epoch(train)  [5][ 80/196]  lr: 8.0000e-03  eta: 0:03:56  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.9110
+02/08 16:35:03 - mmengine - INFO - Epoch(train)  [5][ 90/196]  lr: 8.0000e-03  eta: 0:03:56  time: 0.0333  data_time: 0.0205  memory: 364  loss: 0.9144
+02/08 16:35:04 - mmengine - INFO - Epoch(train)  [5][100/196]  lr: 8.0000e-03  eta: 0:03:55  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.9234
+02/08 16:35:04 - mmengine - INFO - Epoch(train)  [5][110/196]  lr: 8.0000e-03  eta: 0:03:55  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.9268
+02/08 16:35:04 - mmengine - INFO - Epoch(train)  [5][120/196]  lr: 8.0000e-03  eta: 0:03:55  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.9010
+02/08 16:35:05 - mmengine - INFO - Epoch(train)  [5][130/196]  lr: 8.0000e-03  eta: 0:03:54  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.9394
+02/08 16:35:05 - mmengine - INFO - Epoch(train)  [5][140/196]  lr: 8.0000e-03  eta: 0:03:54  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.9059
+02/08 16:35:05 - mmengine - INFO - Epoch(train)  [5][150/196]  lr: 8.0000e-03  eta: 0:03:54  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.9741
+02/08 16:35:06 - mmengine - INFO - Epoch(train)  [5][160/196]  lr: 8.0000e-03  eta: 0:03:53  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.9124
+02/08 16:35:06 - mmengine - INFO - Epoch(train)  [5][170/196]  lr: 8.0000e-03  eta: 0:03:53  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.8813
+02/08 16:35:06 - mmengine - INFO - Epoch(train)  [5][180/196]  lr: 8.0000e-03  eta: 0:03:53  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.9330
+02/08 16:35:07 - mmengine - INFO - Epoch(train)  [5][190/196]  lr: 8.0000e-03  eta: 0:03:52  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.8995
+02/08 16:35:07 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:07 - mmengine - INFO - Saving checkpoint at 5 epochs
+02/08 16:35:07 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:08 - mmengine - INFO - Epoch(val)  [5][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 364  
+02/08 16:35:08 - mmengine - INFO - Epoch(val)  [5][20/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:35:09 - mmengine - INFO - Epoch(val)  [5][30/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 257  
+02/08 16:35:09 - mmengine - INFO - Epoch(val)  [5][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:35:09 - mmengine - INFO - Epoch(val) [5][40/40]  accuracy: 68.0600
+02/08 16:35:09 - mmengine - INFO - Epoch(train)  [6][ 10/196]  lr: 8.0000e-03  eta: 0:03:51  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.8994
+02/08 16:35:09 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:09 - mmengine - INFO - Epoch(train)  [6][ 20/196]  lr: 8.0000e-03  eta: 0:03:51  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.8569
+02/08 16:35:10 - mmengine - INFO - Epoch(train)  [6][ 30/196]  lr: 8.0000e-03  eta: 0:03:51  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.8544
+02/08 16:35:10 - mmengine - INFO - Epoch(train)  [6][ 40/196]  lr: 8.0000e-03  eta: 0:03:50  time: 0.0341  data_time: 0.0213  memory: 364  loss: 0.8474
+02/08 16:35:10 - mmengine - INFO - Epoch(train)  [6][ 50/196]  lr: 8.0000e-03  eta: 0:03:50  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.8399
+02/08 16:35:11 - mmengine - INFO - Epoch(train)  [6][ 60/196]  lr: 8.0000e-03  eta: 0:03:50  time: 0.0365  data_time: 0.0238  memory: 364  loss: 0.8713
+02/08 16:35:11 - mmengine - INFO - Epoch(train)  [6][ 70/196]  lr: 8.0000e-03  eta: 0:03:50  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.8233
+02/08 16:35:11 - mmengine - INFO - Epoch(train)  [6][ 80/196]  lr: 8.0000e-03  eta: 0:03:49  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.9090
+02/08 16:35:12 - mmengine - INFO - Epoch(train)  [6][ 90/196]  lr: 8.0000e-03  eta: 0:03:49  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.8551
+02/08 16:35:12 - mmengine - INFO - Epoch(train)  [6][100/196]  lr: 8.0000e-03  eta: 0:03:49  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.8341
+02/08 16:35:12 - mmengine - INFO - Epoch(train)  [6][110/196]  lr: 8.0000e-03  eta: 0:03:48  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.8318
+02/08 16:35:13 - mmengine - INFO - Epoch(train)  [6][120/196]  lr: 8.0000e-03  eta: 0:03:48  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.8811
+02/08 16:35:13 - mmengine - INFO - Epoch(train)  [6][130/196]  lr: 8.0000e-03  eta: 0:03:47  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.8490
+02/08 16:35:14 - mmengine - INFO - Epoch(train)  [6][140/196]  lr: 8.0000e-03  eta: 0:03:47  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.8266
+02/08 16:35:14 - mmengine - INFO - Epoch(train)  [6][150/196]  lr: 8.0000e-03  eta: 0:03:47  time: 0.0341  data_time: 0.0213  memory: 364  loss: 0.8499
+02/08 16:35:14 - mmengine - INFO - Epoch(train)  [6][160/196]  lr: 8.0000e-03  eta: 0:03:47  time: 0.0351  data_time: 0.0221  memory: 364  loss: 0.8542
+02/08 16:35:15 - mmengine - INFO - Epoch(train)  [6][170/196]  lr: 8.0000e-03  eta: 0:03:46  time: 0.0347  data_time: 0.0219  memory: 364  loss: 0.8348
+02/08 16:35:15 - mmengine - INFO - Epoch(train)  [6][180/196]  lr: 8.0000e-03  eta: 0:03:46  time: 0.0348  data_time: 0.0220  memory: 364  loss: 0.8101
+02/08 16:35:15 - mmengine - INFO - Epoch(train)  [6][190/196]  lr: 8.0000e-03  eta: 0:03:46  time: 0.0350  data_time: 0.0221  memory: 364  loss: 0.8078
+02/08 16:35:15 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:15 - mmengine - INFO - Saving checkpoint at 6 epochs
+02/08 16:35:15 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:17 - mmengine - INFO - Epoch(val)  [6][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 364  
+02/08 16:35:17 - mmengine - INFO - Epoch(val)  [6][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:35:17 - mmengine - INFO - Epoch(val)  [6][30/40]    eta: 0:00:00  time: 0.0185  data_time: 0.0134  memory: 257  
+02/08 16:35:17 - mmengine - INFO - Epoch(val)  [6][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:35:17 - mmengine - INFO - Epoch(val) [6][40/40]  accuracy: 69.4800
+02/08 16:35:18 - mmengine - INFO - Epoch(train)  [7][ 10/196]  lr: 8.0000e-03  eta: 0:03:45  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.8176
+02/08 16:35:18 - mmengine - INFO - Epoch(train)  [7][ 20/196]  lr: 8.0000e-03  eta: 0:03:45  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.8515
+02/08 16:35:18 - mmengine - INFO - Epoch(train)  [7][ 30/196]  lr: 8.0000e-03  eta: 0:03:44  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.7964
+02/08 16:35:19 - mmengine - INFO - Epoch(train)  [7][ 40/196]  lr: 8.0000e-03  eta: 0:03:44  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7669
+02/08 16:35:19 - mmengine - INFO - Epoch(train)  [7][ 50/196]  lr: 8.0000e-03  eta: 0:03:44  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.8176
+02/08 16:35:19 - mmengine - INFO - Epoch(train)  [7][ 60/196]  lr: 8.0000e-03  eta: 0:03:43  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.7970
+02/08 16:35:20 - mmengine - INFO - Epoch(train)  [7][ 70/196]  lr: 8.0000e-03  eta: 0:03:43  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7595
+02/08 16:35:20 - mmengine - INFO - Epoch(train)  [7][ 80/196]  lr: 8.0000e-03  eta: 0:03:43  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.7668
+02/08 16:35:20 - mmengine - INFO - Epoch(train)  [7][ 90/196]  lr: 8.0000e-03  eta: 0:03:42  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.8159
+02/08 16:35:21 - mmengine - INFO - Epoch(train)  [7][100/196]  lr: 8.0000e-03  eta: 0:03:42  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.7788
+02/08 16:35:21 - mmengine - INFO - Epoch(train)  [7][110/196]  lr: 8.0000e-03  eta: 0:03:41  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.7892
+02/08 16:35:21 - mmengine - INFO - Epoch(train)  [7][120/196]  lr: 8.0000e-03  eta: 0:03:41  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.7615
+02/08 16:35:22 - mmengine - INFO - Epoch(train)  [7][130/196]  lr: 8.0000e-03  eta: 0:03:41  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.8099
+02/08 16:35:22 - mmengine - INFO - Epoch(train)  [7][140/196]  lr: 8.0000e-03  eta: 0:03:40  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.8018
+02/08 16:35:22 - mmengine - INFO - Epoch(train)  [7][150/196]  lr: 8.0000e-03  eta: 0:03:40  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.8084
+02/08 16:35:23 - mmengine - INFO - Epoch(train)  [7][160/196]  lr: 8.0000e-03  eta: 0:03:40  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.7746
+02/08 16:35:23 - mmengine - INFO - Epoch(train)  [7][170/196]  lr: 8.0000e-03  eta: 0:03:39  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.7597
+02/08 16:35:23 - mmengine - INFO - Epoch(train)  [7][180/196]  lr: 8.0000e-03  eta: 0:03:39  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.7825
+02/08 16:35:24 - mmengine - INFO - Epoch(train)  [7][190/196]  lr: 8.0000e-03  eta: 0:03:39  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7532
+02/08 16:35:24 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:24 - mmengine - INFO - Saving checkpoint at 7 epochs
+02/08 16:35:24 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:25 - mmengine - INFO - Epoch(val)  [7][10/40]    eta: 0:00:00  time: 0.0185  data_time: 0.0134  memory: 364  
+02/08 16:35:25 - mmengine - INFO - Epoch(val)  [7][20/40]    eta: 0:00:00  time: 0.0185  data_time: 0.0134  memory: 257  
+02/08 16:35:25 - mmengine - INFO - Epoch(val)  [7][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0129  memory: 257  
+02/08 16:35:26 - mmengine - INFO - Epoch(val)  [7][40/40]    eta: 0:00:00  time: 0.0163  data_time: 0.0117  memory: 257  
+02/08 16:35:26 - mmengine - INFO - Epoch(val) [7][40/40]  accuracy: 71.9400
+02/08 16:35:26 - mmengine - INFO - Epoch(train)  [8][ 10/196]  lr: 8.0000e-03  eta: 0:03:38  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.7404
+02/08 16:35:26 - mmengine - INFO - Epoch(train)  [8][ 20/196]  lr: 8.0000e-03  eta: 0:03:38  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7402
+02/08 16:35:27 - mmengine - INFO - Epoch(train)  [8][ 30/196]  lr: 8.0000e-03  eta: 0:03:37  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.8576
+02/08 16:35:27 - mmengine - INFO - Epoch(train)  [8][ 40/196]  lr: 8.0000e-03  eta: 0:03:37  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.8662
+02/08 16:35:27 - mmengine - INFO - Epoch(train)  [8][ 50/196]  lr: 8.0000e-03  eta: 0:03:37  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.7565
+02/08 16:35:28 - mmengine - INFO - Epoch(train)  [8][ 60/196]  lr: 8.0000e-03  eta: 0:03:36  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.7943
+02/08 16:35:28 - mmengine - INFO - Epoch(train)  [8][ 70/196]  lr: 8.0000e-03  eta: 0:03:36  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7508
+02/08 16:35:28 - mmengine - INFO - Epoch(train)  [8][ 80/196]  lr: 8.0000e-03  eta: 0:03:35  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.7708
+02/08 16:35:29 - mmengine - INFO - Epoch(train)  [8][ 90/196]  lr: 8.0000e-03  eta: 0:03:35  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.8060
+02/08 16:35:29 - mmengine - INFO - Epoch(train)  [8][100/196]  lr: 8.0000e-03  eta: 0:03:35  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.8276
+02/08 16:35:29 - mmengine - INFO - Epoch(train)  [8][110/196]  lr: 8.0000e-03  eta: 0:03:34  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.7728
+02/08 16:35:30 - mmengine - INFO - Epoch(train)  [8][120/196]  lr: 8.0000e-03  eta: 0:03:34  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.7700
+02/08 16:35:30 - mmengine - INFO - Epoch(train)  [8][130/196]  lr: 8.0000e-03  eta: 0:03:34  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.7627
+02/08 16:35:30 - mmengine - INFO - Epoch(train)  [8][140/196]  lr: 8.0000e-03  eta: 0:03:33  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.7218
+02/08 16:35:31 - mmengine - INFO - Epoch(train)  [8][150/196]  lr: 8.0000e-03  eta: 0:03:33  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7585
+02/08 16:35:31 - mmengine - INFO - Epoch(train)  [8][160/196]  lr: 8.0000e-03  eta: 0:03:33  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.7574
+02/08 16:35:31 - mmengine - INFO - Epoch(train)  [8][170/196]  lr: 8.0000e-03  eta: 0:03:32  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.7605
+02/08 16:35:32 - mmengine - INFO - Epoch(train)  [8][180/196]  lr: 8.0000e-03  eta: 0:03:32  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7256
+02/08 16:35:32 - mmengine - INFO - Epoch(train)  [8][190/196]  lr: 8.0000e-03  eta: 0:03:32  time: 0.0362  data_time: 0.0235  memory: 364  loss: 0.7347
+02/08 16:35:32 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:32 - mmengine - INFO - Saving checkpoint at 8 epochs
+02/08 16:35:32 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:34 - mmengine - INFO - Epoch(val)  [8][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0133  memory: 364  
+02/08 16:35:34 - mmengine - INFO - Epoch(val)  [8][20/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:35:34 - mmengine - INFO - Epoch(val)  [8][30/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 257  
+02/08 16:35:34 - mmengine - INFO - Epoch(val)  [8][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:35:34 - mmengine - INFO - Epoch(val) [8][40/40]  accuracy: 72.8800
+02/08 16:35:35 - mmengine - INFO - Epoch(train)  [9][ 10/196]  lr: 8.0000e-03  eta: 0:03:31  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.7370
+02/08 16:35:35 - mmengine - INFO - Epoch(train)  [9][ 20/196]  lr: 8.0000e-03  eta: 0:03:31  time: 0.0333  data_time: 0.0205  memory: 364  loss: 0.7252
+02/08 16:35:35 - mmengine - INFO - Epoch(train)  [9][ 30/196]  lr: 8.0000e-03  eta: 0:03:30  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6559
+02/08 16:35:36 - mmengine - INFO - Epoch(train)  [9][ 40/196]  lr: 8.0000e-03  eta: 0:03:30  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.6924
+02/08 16:35:36 - mmengine - INFO - Epoch(train)  [9][ 50/196]  lr: 8.0000e-03  eta: 0:03:30  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.7098
+02/08 16:35:36 - mmengine - INFO - Epoch(train)  [9][ 60/196]  lr: 8.0000e-03  eta: 0:03:29  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.6806
+02/08 16:35:37 - mmengine - INFO - Epoch(train)  [9][ 70/196]  lr: 8.0000e-03  eta: 0:03:29  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.7071
+02/08 16:35:37 - mmengine - INFO - Epoch(train)  [9][ 80/196]  lr: 8.0000e-03  eta: 0:03:29  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.7033
+02/08 16:35:37 - mmengine - INFO - Epoch(train)  [9][ 90/196]  lr: 8.0000e-03  eta: 0:03:28  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.6910
+02/08 16:35:38 - mmengine - INFO - Epoch(train)  [9][100/196]  lr: 8.0000e-03  eta: 0:03:28  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.7125
+02/08 16:35:38 - mmengine - INFO - Epoch(train)  [9][110/196]  lr: 8.0000e-03  eta: 0:03:28  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.7067
+02/08 16:35:38 - mmengine - INFO - Epoch(train)  [9][120/196]  lr: 8.0000e-03  eta: 0:03:27  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.6996
+02/08 16:35:39 - mmengine - INFO - Epoch(train)  [9][130/196]  lr: 8.0000e-03  eta: 0:03:27  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6827
+02/08 16:35:39 - mmengine - INFO - Epoch(train)  [9][140/196]  lr: 8.0000e-03  eta: 0:03:27  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.7063
+02/08 16:35:39 - mmengine - INFO - Epoch(train)  [9][150/196]  lr: 8.0000e-03  eta: 0:03:26  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.7043
+02/08 16:35:40 - mmengine - INFO - Epoch(train)  [9][160/196]  lr: 8.0000e-03  eta: 0:03:26  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.6855
+02/08 16:35:40 - mmengine - INFO - Epoch(train)  [9][170/196]  lr: 8.0000e-03  eta: 0:03:26  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6894
+02/08 16:35:40 - mmengine - INFO - Epoch(train)  [9][180/196]  lr: 8.0000e-03  eta: 0:03:25  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.6764
+02/08 16:35:41 - mmengine - INFO - Epoch(train)  [9][190/196]  lr: 8.0000e-03  eta: 0:03:25  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.6726
+02/08 16:35:41 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:41 - mmengine - INFO - Saving checkpoint at 9 epochs
+02/08 16:35:41 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:42 - mmengine - INFO - Epoch(val)  [9][10/40]    eta: 0:00:00  time: 0.0189  data_time: 0.0137  memory: 364  
+02/08 16:35:42 - mmengine - INFO - Epoch(val)  [9][20/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 257  
+02/08 16:35:42 - mmengine - INFO - Epoch(val)  [9][30/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 257  
+02/08 16:35:43 - mmengine - INFO - Epoch(val)  [9][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0118  memory: 257  
+02/08 16:35:43 - mmengine - INFO - Epoch(val) [9][40/40]  accuracy: 74.2000
+02/08 16:35:43 - mmengine - INFO - Epoch(train) [10][ 10/196]  lr: 8.0000e-03  eta: 0:03:24  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.6634
+02/08 16:35:43 - mmengine - INFO - Epoch(train) [10][ 20/196]  lr: 8.0000e-03  eta: 0:03:24  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.6732
+02/08 16:35:44 - mmengine - INFO - Epoch(train) [10][ 30/196]  lr: 8.0000e-03  eta: 0:03:24  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.6515
+02/08 16:35:44 - mmengine - INFO - Epoch(train) [10][ 40/196]  lr: 8.0000e-03  eta: 0:03:23  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6577
+02/08 16:35:44 - mmengine - INFO - Epoch(train) [10][ 50/196]  lr: 8.0000e-03  eta: 0:03:23  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6974
+02/08 16:35:45 - mmengine - INFO - Epoch(train) [10][ 60/196]  lr: 8.0000e-03  eta: 0:03:23  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.6685
+02/08 16:35:45 - mmengine - INFO - Epoch(train) [10][ 70/196]  lr: 8.0000e-03  eta: 0:03:22  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.6813
+02/08 16:35:45 - mmengine - INFO - Epoch(train) [10][ 80/196]  lr: 8.0000e-03  eta: 0:03:22  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6245
+02/08 16:35:46 - mmengine - INFO - Epoch(train) [10][ 90/196]  lr: 8.0000e-03  eta: 0:03:22  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6858
+02/08 16:35:46 - mmengine - INFO - Epoch(train) [10][100/196]  lr: 8.0000e-03  eta: 0:03:21  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6827
+02/08 16:35:46 - mmengine - INFO - Epoch(train) [10][110/196]  lr: 8.0000e-03  eta: 0:03:21  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.6812
+02/08 16:35:47 - mmengine - INFO - Epoch(train) [10][120/196]  lr: 8.0000e-03  eta: 0:03:20  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.6270
+02/08 16:35:47 - mmengine - INFO - Epoch(train) [10][130/196]  lr: 8.0000e-03  eta: 0:03:20  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.7743
+02/08 16:35:47 - mmengine - INFO - Epoch(train) [10][140/196]  lr: 8.0000e-03  eta: 0:03:20  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.7050
+02/08 16:35:48 - mmengine - INFO - Epoch(train) [10][150/196]  lr: 8.0000e-03  eta: 0:03:19  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.7045
+02/08 16:35:48 - mmengine - INFO - Epoch(train) [10][160/196]  lr: 8.0000e-03  eta: 0:03:19  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.7038
+02/08 16:35:48 - mmengine - INFO - Epoch(train) [10][170/196]  lr: 8.0000e-03  eta: 0:03:19  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6997
+02/08 16:35:49 - mmengine - INFO - Epoch(train) [10][180/196]  lr: 8.0000e-03  eta: 0:03:18  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.6609
+02/08 16:35:49 - mmengine - INFO - Epoch(train) [10][190/196]  lr: 8.0000e-03  eta: 0:03:18  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6642
+02/08 16:35:49 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:49 - mmengine - INFO - Saving checkpoint at 10 epochs
+02/08 16:35:49 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:51 - mmengine - INFO - Epoch(val) [10][10/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 364  
+02/08 16:35:51 - mmengine - INFO - Epoch(val) [10][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:35:51 - mmengine - INFO - Epoch(val) [10][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:35:51 - mmengine - INFO - Epoch(val) [10][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:35:51 - mmengine - INFO - Epoch(val) [10][40/40]  accuracy: 75.3100
+02/08 16:35:51 - mmengine - INFO - Epoch(train) [11][ 10/196]  lr: 8.0000e-03  eta: 0:03:18  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.6265
+02/08 16:35:52 - mmengine - INFO - Epoch(train) [11][ 20/196]  lr: 8.0000e-03  eta: 0:03:17  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.6575
+02/08 16:35:52 - mmengine - INFO - Epoch(train) [11][ 30/196]  lr: 8.0000e-03  eta: 0:03:17  time: 0.0342  data_time: 0.0214  memory: 364  loss: 0.6548
+02/08 16:35:52 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:52 - mmengine - INFO - Epoch(train) [11][ 40/196]  lr: 8.0000e-03  eta: 0:03:17  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.6583
+02/08 16:35:53 - mmengine - INFO - Epoch(train) [11][ 50/196]  lr: 8.0000e-03  eta: 0:03:16  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6369
+02/08 16:35:53 - mmengine - INFO - Epoch(train) [11][ 60/196]  lr: 8.0000e-03  eta: 0:03:16  time: 0.0375  data_time: 0.0247  memory: 364  loss: 0.6307
+02/08 16:35:53 - mmengine - INFO - Epoch(train) [11][ 70/196]  lr: 8.0000e-03  eta: 0:03:16  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6175
+02/08 16:35:54 - mmengine - INFO - Epoch(train) [11][ 80/196]  lr: 8.0000e-03  eta: 0:03:15  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6293
+02/08 16:35:54 - mmengine - INFO - Epoch(train) [11][ 90/196]  lr: 8.0000e-03  eta: 0:03:15  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.6447
+02/08 16:35:54 - mmengine - INFO - Epoch(train) [11][100/196]  lr: 8.0000e-03  eta: 0:03:15  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.6340
+02/08 16:35:55 - mmengine - INFO - Epoch(train) [11][110/196]  lr: 8.0000e-03  eta: 0:03:14  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.6412
+02/08 16:35:55 - mmengine - INFO - Epoch(train) [11][120/196]  lr: 8.0000e-03  eta: 0:03:14  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6309
+02/08 16:35:55 - mmengine - INFO - Epoch(train) [11][130/196]  lr: 8.0000e-03  eta: 0:03:14  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.6279
+02/08 16:35:56 - mmengine - INFO - Epoch(train) [11][140/196]  lr: 8.0000e-03  eta: 0:03:13  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.6298
+02/08 16:35:56 - mmengine - INFO - Epoch(train) [11][150/196]  lr: 8.0000e-03  eta: 0:03:13  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.6364
+02/08 16:35:56 - mmengine - INFO - Epoch(train) [11][160/196]  lr: 8.0000e-03  eta: 0:03:13  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6209
+02/08 16:35:57 - mmengine - INFO - Epoch(train) [11][170/196]  lr: 8.0000e-03  eta: 0:03:12  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.6348
+02/08 16:35:57 - mmengine - INFO - Epoch(train) [11][180/196]  lr: 8.0000e-03  eta: 0:03:12  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6319
+02/08 16:35:57 - mmengine - INFO - Epoch(train) [11][190/196]  lr: 8.0000e-03  eta: 0:03:11  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6367
+02/08 16:35:58 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:35:58 - mmengine - INFO - Saving checkpoint at 11 epochs
+02/08 16:35:58 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:35:59 - mmengine - INFO - Epoch(val) [11][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 364  
+02/08 16:35:59 - mmengine - INFO - Epoch(val) [11][20/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 257  
+02/08 16:35:59 - mmengine - INFO - Epoch(val) [11][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:36:00 - mmengine - INFO - Epoch(val) [11][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:36:00 - mmengine - INFO - Epoch(val) [11][40/40]  accuracy: 77.8700
+02/08 16:36:00 - mmengine - INFO - Epoch(train) [12][ 10/196]  lr: 8.0000e-03  eta: 0:03:11  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6163
+02/08 16:36:00 - mmengine - INFO - Epoch(train) [12][ 20/196]  lr: 8.0000e-03  eta: 0:03:11  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5723
+02/08 16:36:01 - mmengine - INFO - Epoch(train) [12][ 30/196]  lr: 8.0000e-03  eta: 0:03:10  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.5852
+02/08 16:36:01 - mmengine - INFO - Epoch(train) [12][ 40/196]  lr: 8.0000e-03  eta: 0:03:10  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6057
+02/08 16:36:01 - mmengine - INFO - Epoch(train) [12][ 50/196]  lr: 8.0000e-03  eta: 0:03:10  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5708
+02/08 16:36:02 - mmengine - INFO - Epoch(train) [12][ 60/196]  lr: 8.0000e-03  eta: 0:03:09  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.6135
+02/08 16:36:02 - mmengine - INFO - Epoch(train) [12][ 70/196]  lr: 8.0000e-03  eta: 0:03:09  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.6008
+02/08 16:36:02 - mmengine - INFO - Epoch(train) [12][ 80/196]  lr: 8.0000e-03  eta: 0:03:09  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5789
+02/08 16:36:03 - mmengine - INFO - Epoch(train) [12][ 90/196]  lr: 8.0000e-03  eta: 0:03:08  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.5990
+02/08 16:36:03 - mmengine - INFO - Epoch(train) [12][100/196]  lr: 8.0000e-03  eta: 0:03:08  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5766
+02/08 16:36:03 - mmengine - INFO - Epoch(train) [12][110/196]  lr: 8.0000e-03  eta: 0:03:07  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6178
+02/08 16:36:04 - mmengine - INFO - Epoch(train) [12][120/196]  lr: 8.0000e-03  eta: 0:03:07  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.6257
+02/08 16:36:04 - mmengine - INFO - Epoch(train) [12][130/196]  lr: 8.0000e-03  eta: 0:03:07  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.6406
+02/08 16:36:04 - mmengine - INFO - Epoch(train) [12][140/196]  lr: 8.0000e-03  eta: 0:03:06  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.6211
+02/08 16:36:05 - mmengine - INFO - Epoch(train) [12][150/196]  lr: 8.0000e-03  eta: 0:03:06  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5777
+02/08 16:36:05 - mmengine - INFO - Epoch(train) [12][160/196]  lr: 8.0000e-03  eta: 0:03:06  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.6101
+02/08 16:36:05 - mmengine - INFO - Epoch(train) [12][170/196]  lr: 8.0000e-03  eta: 0:03:05  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6270
+02/08 16:36:06 - mmengine - INFO - Epoch(train) [12][180/196]  lr: 8.0000e-03  eta: 0:03:05  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6049
+02/08 16:36:06 - mmengine - INFO - Epoch(train) [12][190/196]  lr: 8.0000e-03  eta: 0:03:05  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.6187
+02/08 16:36:06 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:06 - mmengine - INFO - Saving checkpoint at 12 epochs
+02/08 16:36:06 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:36:07 - mmengine - INFO - Epoch(val) [12][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 364  
+02/08 16:36:08 - mmengine - INFO - Epoch(val) [12][20/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 257  
+02/08 16:36:08 - mmengine - INFO - Epoch(val) [12][30/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 257  
+02/08 16:36:08 - mmengine - INFO - Epoch(val) [12][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:36:08 - mmengine - INFO - Epoch(val) [12][40/40]  accuracy: 77.6900
+02/08 16:36:08 - mmengine - INFO - Epoch(train) [13][ 10/196]  lr: 8.0000e-03  eta: 0:03:04  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5620
+02/08 16:36:09 - mmengine - INFO - Epoch(train) [13][ 20/196]  lr: 8.0000e-03  eta: 0:03:04  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5792
+02/08 16:36:09 - mmengine - INFO - Epoch(train) [13][ 30/196]  lr: 8.0000e-03  eta: 0:03:04  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6055
+02/08 16:36:09 - mmengine - INFO - Epoch(train) [13][ 40/196]  lr: 8.0000e-03  eta: 0:03:03  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.5718
+02/08 16:36:10 - mmengine - INFO - Epoch(train) [13][ 50/196]  lr: 8.0000e-03  eta: 0:03:03  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.5934
+02/08 16:36:10 - mmengine - INFO - Epoch(train) [13][ 60/196]  lr: 8.0000e-03  eta: 0:03:02  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5764
+02/08 16:36:10 - mmengine - INFO - Epoch(train) [13][ 70/196]  lr: 8.0000e-03  eta: 0:03:02  time: 0.0340  data_time: 0.0213  memory: 364  loss: 0.6107
+02/08 16:36:11 - mmengine - INFO - Epoch(train) [13][ 80/196]  lr: 8.0000e-03  eta: 0:03:02  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6016
+02/08 16:36:11 - mmengine - INFO - Epoch(train) [13][ 90/196]  lr: 8.0000e-03  eta: 0:03:01  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5777
+02/08 16:36:11 - mmengine - INFO - Epoch(train) [13][100/196]  lr: 8.0000e-03  eta: 0:03:01  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5572
+02/08 16:36:12 - mmengine - INFO - Epoch(train) [13][110/196]  lr: 8.0000e-03  eta: 0:03:01  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5847
+02/08 16:36:12 - mmengine - INFO - Epoch(train) [13][120/196]  lr: 8.0000e-03  eta: 0:03:00  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.5900
+02/08 16:36:12 - mmengine - INFO - Epoch(train) [13][130/196]  lr: 8.0000e-03  eta: 0:03:00  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5878
+02/08 16:36:13 - mmengine - INFO - Epoch(train) [13][140/196]  lr: 8.0000e-03  eta: 0:03:00  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5752
+02/08 16:36:13 - mmengine - INFO - Epoch(train) [13][150/196]  lr: 8.0000e-03  eta: 0:02:59  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.6160
+02/08 16:36:13 - mmengine - INFO - Epoch(train) [13][160/196]  lr: 8.0000e-03  eta: 0:02:59  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5802
+02/08 16:36:14 - mmengine - INFO - Epoch(train) [13][170/196]  lr: 8.0000e-03  eta: 0:02:59  time: 0.0364  data_time: 0.0237  memory: 364  loss: 0.5747
+02/08 16:36:14 - mmengine - INFO - Epoch(train) [13][180/196]  lr: 8.0000e-03  eta: 0:02:59  time: 0.0347  data_time: 0.0218  memory: 364  loss: 0.5845
+02/08 16:36:14 - mmengine - INFO - Epoch(train) [13][190/196]  lr: 8.0000e-03  eta: 0:02:58  time: 0.0350  data_time: 0.0221  memory: 364  loss: 0.5820
+02/08 16:36:15 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:15 - mmengine - INFO - Saving checkpoint at 13 epochs
+02/08 16:36:15 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:36:16 - mmengine - INFO - Epoch(val) [13][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 364  
+02/08 16:36:16 - mmengine - INFO - Epoch(val) [13][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:36:16 - mmengine - INFO - Epoch(val) [13][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:36:17 - mmengine - INFO - Epoch(val) [13][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:36:17 - mmengine - INFO - Epoch(val) [13][40/40]  accuracy: 78.5200
+02/08 16:36:17 - mmengine - INFO - Epoch(train) [14][ 10/196]  lr: 8.0000e-03  eta: 0:02:58  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5337
+02/08 16:36:17 - mmengine - INFO - Epoch(train) [14][ 20/196]  lr: 8.0000e-03  eta: 0:02:57  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.5611
+02/08 16:36:18 - mmengine - INFO - Epoch(train) [14][ 30/196]  lr: 8.0000e-03  eta: 0:02:57  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5804
+02/08 16:36:18 - mmengine - INFO - Epoch(train) [14][ 40/196]  lr: 8.0000e-03  eta: 0:02:57  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6061
+02/08 16:36:18 - mmengine - INFO - Epoch(train) [14][ 50/196]  lr: 8.0000e-03  eta: 0:02:56  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5331
+02/08 16:36:19 - mmengine - INFO - Epoch(train) [14][ 60/196]  lr: 8.0000e-03  eta: 0:02:56  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5741
+02/08 16:36:19 - mmengine - INFO - Epoch(train) [14][ 70/196]  lr: 8.0000e-03  eta: 0:02:56  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5409
+02/08 16:36:19 - mmengine - INFO - Epoch(train) [14][ 80/196]  lr: 8.0000e-03  eta: 0:02:55  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5492
+02/08 16:36:20 - mmengine - INFO - Epoch(train) [14][ 90/196]  lr: 8.0000e-03  eta: 0:02:55  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5441
+02/08 16:36:20 - mmengine - INFO - Epoch(train) [14][100/196]  lr: 8.0000e-03  eta: 0:02:55  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5377
+02/08 16:36:20 - mmengine - INFO - Epoch(train) [14][110/196]  lr: 8.0000e-03  eta: 0:02:54  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5170
+02/08 16:36:21 - mmengine - INFO - Epoch(train) [14][120/196]  lr: 8.0000e-03  eta: 0:02:54  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.5558
+02/08 16:36:21 - mmengine - INFO - Epoch(train) [14][130/196]  lr: 8.0000e-03  eta: 0:02:54  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5720
+02/08 16:36:21 - mmengine - INFO - Epoch(train) [14][140/196]  lr: 8.0000e-03  eta: 0:02:53  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5567
+02/08 16:36:22 - mmengine - INFO - Epoch(train) [14][150/196]  lr: 8.0000e-03  eta: 0:02:53  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5632
+02/08 16:36:22 - mmengine - INFO - Epoch(train) [14][160/196]  lr: 8.0000e-03  eta: 0:02:53  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5424
+02/08 16:36:22 - mmengine - INFO - Epoch(train) [14][170/196]  lr: 8.0000e-03  eta: 0:02:52  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.6070
+02/08 16:36:23 - mmengine - INFO - Epoch(train) [14][180/196]  lr: 8.0000e-03  eta: 0:02:52  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6100
+02/08 16:36:23 - mmengine - INFO - Epoch(train) [14][190/196]  lr: 8.0000e-03  eta: 0:02:52  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5410
+02/08 16:36:23 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:23 - mmengine - INFO - Saving checkpoint at 14 epochs
+02/08 16:36:23 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:36:24 - mmengine - INFO - Epoch(val) [14][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0133  memory: 364  
+02/08 16:36:25 - mmengine - INFO - Epoch(val) [14][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 257  
+02/08 16:36:25 - mmengine - INFO - Epoch(val) [14][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:36:25 - mmengine - INFO - Epoch(val) [14][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:36:25 - mmengine - INFO - Epoch(val) [14][40/40]  accuracy: 78.0400
+02/08 16:36:25 - mmengine - INFO - Epoch(train) [15][ 10/196]  lr: 8.0000e-03  eta: 0:02:51  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4918
+02/08 16:36:26 - mmengine - INFO - Epoch(train) [15][ 20/196]  lr: 8.0000e-03  eta: 0:02:51  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5220
+02/08 16:36:26 - mmengine - INFO - Epoch(train) [15][ 30/196]  lr: 8.0000e-03  eta: 0:02:50  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5206
+02/08 16:36:26 - mmengine - INFO - Epoch(train) [15][ 40/196]  lr: 8.0000e-03  eta: 0:02:50  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4880
+02/08 16:36:27 - mmengine - INFO - Epoch(train) [15][ 50/196]  lr: 8.0000e-03  eta: 0:02:50  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5492
+02/08 16:36:27 - mmengine - INFO - Epoch(train) [15][ 60/196]  lr: 8.0000e-03  eta: 0:02:49  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.5426
+02/08 16:36:27 - mmengine - INFO - Epoch(train) [15][ 70/196]  lr: 8.0000e-03  eta: 0:02:49  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.5528
+02/08 16:36:28 - mmengine - INFO - Epoch(train) [15][ 80/196]  lr: 8.0000e-03  eta: 0:02:49  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5340
+02/08 16:36:28 - mmengine - INFO - Epoch(train) [15][ 90/196]  lr: 8.0000e-03  eta: 0:02:48  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5324
+02/08 16:36:28 - mmengine - INFO - Epoch(train) [15][100/196]  lr: 8.0000e-03  eta: 0:02:48  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5453
+02/08 16:36:29 - mmengine - INFO - Epoch(train) [15][110/196]  lr: 8.0000e-03  eta: 0:02:48  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5358
+02/08 16:36:29 - mmengine - INFO - Epoch(train) [15][120/196]  lr: 8.0000e-03  eta: 0:02:47  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5528
+02/08 16:36:29 - mmengine - INFO - Epoch(train) [15][130/196]  lr: 8.0000e-03  eta: 0:02:47  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5271
+02/08 16:36:30 - mmengine - INFO - Epoch(train) [15][140/196]  lr: 8.0000e-03  eta: 0:02:47  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5615
+02/08 16:36:30 - mmengine - INFO - Epoch(train) [15][150/196]  lr: 8.0000e-03  eta: 0:02:46  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5432
+02/08 16:36:30 - mmengine - INFO - Epoch(train) [15][160/196]  lr: 8.0000e-03  eta: 0:02:46  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5443
+02/08 16:36:31 - mmengine - INFO - Epoch(train) [15][170/196]  lr: 8.0000e-03  eta: 0:02:46  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5525
+02/08 16:36:31 - mmengine - INFO - Epoch(train) [15][180/196]  lr: 8.0000e-03  eta: 0:02:45  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5448
+02/08 16:36:31 - mmengine - INFO - Epoch(train) [15][190/196]  lr: 8.0000e-03  eta: 0:02:45  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.5513
+02/08 16:36:32 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:32 - mmengine - INFO - Saving checkpoint at 15 epochs
+02/08 16:36:32 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:36:33 - mmengine - INFO - Epoch(val) [15][10/40]    eta: 0:00:00  time: 0.0185  data_time: 0.0134  memory: 364  
+02/08 16:36:33 - mmengine - INFO - Epoch(val) [15][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 257  
+02/08 16:36:33 - mmengine - INFO - Epoch(val) [15][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0128  memory: 257  
+02/08 16:36:33 - mmengine - INFO - Epoch(val) [15][40/40]    eta: 0:00:00  time: 0.0163  data_time: 0.0117  memory: 257  
+02/08 16:36:33 - mmengine - INFO - Epoch(val) [15][40/40]  accuracy: 80.1100
+02/08 16:36:34 - mmengine - INFO - Epoch(train) [16][ 10/196]  lr: 8.0000e-03  eta: 0:02:44  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5358
+02/08 16:36:34 - mmengine - INFO - Epoch(train) [16][ 20/196]  lr: 8.0000e-03  eta: 0:02:44  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.5115
+02/08 16:36:34 - mmengine - INFO - Epoch(train) [16][ 30/196]  lr: 8.0000e-03  eta: 0:02:44  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5023
+02/08 16:36:35 - mmengine - INFO - Epoch(train) [16][ 40/196]  lr: 8.0000e-03  eta: 0:02:43  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4920
+02/08 16:36:35 - mmengine - INFO - Epoch(train) [16][ 50/196]  lr: 8.0000e-03  eta: 0:02:43  time: 0.0362  data_time: 0.0234  memory: 364  loss: 0.5558
+02/08 16:36:35 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:35 - mmengine - INFO - Epoch(train) [16][ 60/196]  lr: 8.0000e-03  eta: 0:02:43  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.5132
+02/08 16:36:36 - mmengine - INFO - Epoch(train) [16][ 70/196]  lr: 8.0000e-03  eta: 0:02:42  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.5140
+02/08 16:36:36 - mmengine - INFO - Epoch(train) [16][ 80/196]  lr: 8.0000e-03  eta: 0:02:42  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.5328
+02/08 16:36:36 - mmengine - INFO - Epoch(train) [16][ 90/196]  lr: 8.0000e-03  eta: 0:02:42  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.5552
+02/08 16:36:37 - mmengine - INFO - Epoch(train) [16][100/196]  lr: 8.0000e-03  eta: 0:02:41  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4939
+02/08 16:36:37 - mmengine - INFO - Epoch(train) [16][110/196]  lr: 8.0000e-03  eta: 0:02:41  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5395
+02/08 16:36:37 - mmengine - INFO - Epoch(train) [16][120/196]  lr: 8.0000e-03  eta: 0:02:41  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.5138
+02/08 16:36:38 - mmengine - INFO - Epoch(train) [16][130/196]  lr: 8.0000e-03  eta: 0:02:40  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.5453
+02/08 16:36:38 - mmengine - INFO - Epoch(train) [16][140/196]  lr: 8.0000e-03  eta: 0:02:40  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5234
+02/08 16:36:38 - mmengine - INFO - Epoch(train) [16][150/196]  lr: 8.0000e-03  eta: 0:02:40  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5212
+02/08 16:36:39 - mmengine - INFO - Epoch(train) [16][160/196]  lr: 8.0000e-03  eta: 0:02:39  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5135
+02/08 16:36:39 - mmengine - INFO - Epoch(train) [16][170/196]  lr: 8.0000e-03  eta: 0:02:39  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5040
+02/08 16:36:39 - mmengine - INFO - Epoch(train) [16][180/196]  lr: 8.0000e-03  eta: 0:02:39  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.5438
+02/08 16:36:40 - mmengine - INFO - Epoch(train) [16][190/196]  lr: 8.0000e-03  eta: 0:02:38  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.5542
+02/08 16:36:40 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:40 - mmengine - INFO - Saving checkpoint at 16 epochs
+02/08 16:36:40 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:36:41 - mmengine - INFO - Epoch(val) [16][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0133  memory: 364  
+02/08 16:36:42 - mmengine - INFO - Epoch(val) [16][20/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:36:42 - mmengine - INFO - Epoch(val) [16][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:36:42 - mmengine - INFO - Epoch(val) [16][40/40]    eta: 0:00:00  time: 0.0168  data_time: 0.0121  memory: 257  
+02/08 16:36:42 - mmengine - INFO - Epoch(val) [16][40/40]  accuracy: 78.6400
+02/08 16:36:42 - mmengine - INFO - Epoch(train) [17][ 10/196]  lr: 8.0000e-03  eta: 0:02:38  time: 0.0344  data_time: 0.0216  memory: 364  loss: 0.4834
+02/08 16:36:43 - mmengine - INFO - Epoch(train) [17][ 20/196]  lr: 8.0000e-03  eta: 0:02:37  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.5368
+02/08 16:36:43 - mmengine - INFO - Epoch(train) [17][ 30/196]  lr: 8.0000e-03  eta: 0:02:37  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5118
+02/08 16:36:43 - mmengine - INFO - Epoch(train) [17][ 40/196]  lr: 8.0000e-03  eta: 0:02:37  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4871
+02/08 16:36:44 - mmengine - INFO - Epoch(train) [17][ 50/196]  lr: 8.0000e-03  eta: 0:02:36  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4884
+02/08 16:36:44 - mmengine - INFO - Epoch(train) [17][ 60/196]  lr: 8.0000e-03  eta: 0:02:36  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4792
+02/08 16:36:44 - mmengine - INFO - Epoch(train) [17][ 70/196]  lr: 8.0000e-03  eta: 0:02:36  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5094
+02/08 16:36:45 - mmengine - INFO - Epoch(train) [17][ 80/196]  lr: 8.0000e-03  eta: 0:02:35  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.5081
+02/08 16:36:45 - mmengine - INFO - Epoch(train) [17][ 90/196]  lr: 8.0000e-03  eta: 0:02:35  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5168
+02/08 16:36:45 - mmengine - INFO - Epoch(train) [17][100/196]  lr: 8.0000e-03  eta: 0:02:35  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5273
+02/08 16:36:46 - mmengine - INFO - Epoch(train) [17][110/196]  lr: 8.0000e-03  eta: 0:02:34  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.5032
+02/08 16:36:46 - mmengine - INFO - Epoch(train) [17][120/196]  lr: 8.0000e-03  eta: 0:02:34  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4796
+02/08 16:36:46 - mmengine - INFO - Epoch(train) [17][130/196]  lr: 8.0000e-03  eta: 0:02:34  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4889
+02/08 16:36:47 - mmengine - INFO - Epoch(train) [17][140/196]  lr: 8.0000e-03  eta: 0:02:33  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4961
+02/08 16:36:47 - mmengine - INFO - Epoch(train) [17][150/196]  lr: 8.0000e-03  eta: 0:02:33  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.5116
+02/08 16:36:47 - mmengine - INFO - Epoch(train) [17][160/196]  lr: 8.0000e-03  eta: 0:02:33  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5212
+02/08 16:36:48 - mmengine - INFO - Epoch(train) [17][170/196]  lr: 8.0000e-03  eta: 0:02:32  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5208
+02/08 16:36:48 - mmengine - INFO - Epoch(train) [17][180/196]  lr: 8.0000e-03  eta: 0:02:32  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5081
+02/08 16:36:48 - mmengine - INFO - Epoch(train) [17][190/196]  lr: 8.0000e-03  eta: 0:02:32  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4825
+02/08 16:36:48 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:48 - mmengine - INFO - Saving checkpoint at 17 epochs
+02/08 16:36:48 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:36:50 - mmengine - INFO - Epoch(val) [17][10/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 364  
+02/08 16:36:50 - mmengine - INFO - Epoch(val) [17][20/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:36:50 - mmengine - INFO - Epoch(val) [17][30/40]    eta: 0:00:00  time: 0.0185  data_time: 0.0134  memory: 257  
+02/08 16:36:50 - mmengine - INFO - Epoch(val) [17][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:36:50 - mmengine - INFO - Epoch(val) [17][40/40]  accuracy: 80.2000
+02/08 16:36:51 - mmengine - INFO - Epoch(train) [18][ 10/196]  lr: 8.0000e-03  eta: 0:02:31  time: 0.0341  data_time: 0.0213  memory: 364  loss: 0.4856
+02/08 16:36:51 - mmengine - INFO - Epoch(train) [18][ 20/196]  lr: 8.0000e-03  eta: 0:02:31  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.4924
+02/08 16:36:51 - mmengine - INFO - Epoch(train) [18][ 30/196]  lr: 8.0000e-03  eta: 0:02:30  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4639
+02/08 16:36:52 - mmengine - INFO - Epoch(train) [18][ 40/196]  lr: 8.0000e-03  eta: 0:02:30  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4896
+02/08 16:36:52 - mmengine - INFO - Epoch(train) [18][ 50/196]  lr: 8.0000e-03  eta: 0:02:30  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.4756
+02/08 16:36:52 - mmengine - INFO - Epoch(train) [18][ 60/196]  lr: 8.0000e-03  eta: 0:02:29  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.4665
+02/08 16:36:53 - mmengine - INFO - Epoch(train) [18][ 70/196]  lr: 8.0000e-03  eta: 0:02:29  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4688
+02/08 16:36:53 - mmengine - INFO - Epoch(train) [18][ 80/196]  lr: 8.0000e-03  eta: 0:02:29  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.4517
+02/08 16:36:53 - mmengine - INFO - Epoch(train) [18][ 90/196]  lr: 8.0000e-03  eta: 0:02:28  time: 0.0347  data_time: 0.0219  memory: 364  loss: 0.4949
+02/08 16:36:54 - mmengine - INFO - Epoch(train) [18][100/196]  lr: 8.0000e-03  eta: 0:02:28  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.5008
+02/08 16:36:54 - mmengine - INFO - Epoch(train) [18][110/196]  lr: 8.0000e-03  eta: 0:02:28  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4561
+02/08 16:36:54 - mmengine - INFO - Epoch(train) [18][120/196]  lr: 8.0000e-03  eta: 0:02:27  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4758
+02/08 16:36:55 - mmengine - INFO - Epoch(train) [18][130/196]  lr: 8.0000e-03  eta: 0:02:27  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4861
+02/08 16:36:55 - mmengine - INFO - Epoch(train) [18][140/196]  lr: 8.0000e-03  eta: 0:02:27  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.5064
+02/08 16:36:55 - mmengine - INFO - Epoch(train) [18][150/196]  lr: 8.0000e-03  eta: 0:02:26  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4828
+02/08 16:36:56 - mmengine - INFO - Epoch(train) [18][160/196]  lr: 8.0000e-03  eta: 0:02:26  time: 0.0362  data_time: 0.0234  memory: 364  loss: 0.5150
+02/08 16:36:56 - mmengine - INFO - Epoch(train) [18][170/196]  lr: 8.0000e-03  eta: 0:02:26  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5295
+02/08 16:36:56 - mmengine - INFO - Epoch(train) [18][180/196]  lr: 8.0000e-03  eta: 0:02:25  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5258
+02/08 16:36:57 - mmengine - INFO - Epoch(train) [18][190/196]  lr: 8.0000e-03  eta: 0:02:25  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5140
+02/08 16:36:57 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:36:57 - mmengine - INFO - Saving checkpoint at 18 epochs
+02/08 16:36:57 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:36:58 - mmengine - INFO - Epoch(val) [18][10/40]    eta: 0:00:00  time: 0.0188  data_time: 0.0136  memory: 364  
+02/08 16:36:58 - mmengine - INFO - Epoch(val) [18][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 257  
+02/08 16:36:58 - mmengine - INFO - Epoch(val) [18][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:36:59 - mmengine - INFO - Epoch(val) [18][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:36:59 - mmengine - INFO - Epoch(val) [18][40/40]  accuracy: 80.0500
+02/08 16:36:59 - mmengine - INFO - Epoch(train) [19][ 10/196]  lr: 8.0000e-03  eta: 0:02:24  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.4437
+02/08 16:36:59 - mmengine - INFO - Epoch(train) [19][ 20/196]  lr: 8.0000e-03  eta: 0:02:24  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4679
+02/08 16:37:00 - mmengine - INFO - Epoch(train) [19][ 30/196]  lr: 8.0000e-03  eta: 0:02:24  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5021
+02/08 16:37:00 - mmengine - INFO - Epoch(train) [19][ 40/196]  lr: 8.0000e-03  eta: 0:02:23  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5035
+02/08 16:37:00 - mmengine - INFO - Epoch(train) [19][ 50/196]  lr: 8.0000e-03  eta: 0:02:23  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4845
+02/08 16:37:01 - mmengine - INFO - Epoch(train) [19][ 60/196]  lr: 8.0000e-03  eta: 0:02:23  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4943
+02/08 16:37:01 - mmengine - INFO - Epoch(train) [19][ 70/196]  lr: 8.0000e-03  eta: 0:02:22  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.4833
+02/08 16:37:01 - mmengine - INFO - Epoch(train) [19][ 80/196]  lr: 8.0000e-03  eta: 0:02:22  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4653
+02/08 16:37:02 - mmengine - INFO - Epoch(train) [19][ 90/196]  lr: 8.0000e-03  eta: 0:02:22  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4486
+02/08 16:37:02 - mmengine - INFO - Epoch(train) [19][100/196]  lr: 8.0000e-03  eta: 0:02:21  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4847
+02/08 16:37:02 - mmengine - INFO - Epoch(train) [19][110/196]  lr: 8.0000e-03  eta: 0:02:21  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.4651
+02/08 16:37:03 - mmengine - INFO - Epoch(train) [19][120/196]  lr: 8.0000e-03  eta: 0:02:21  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4717
+02/08 16:37:03 - mmengine - INFO - Epoch(train) [19][130/196]  lr: 8.0000e-03  eta: 0:02:20  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.4784
+02/08 16:37:03 - mmengine - INFO - Epoch(train) [19][140/196]  lr: 8.0000e-03  eta: 0:02:20  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4663
+02/08 16:37:04 - mmengine - INFO - Epoch(train) [19][150/196]  lr: 8.0000e-03  eta: 0:02:20  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4552
+02/08 16:37:04 - mmengine - INFO - Epoch(train) [19][160/196]  lr: 8.0000e-03  eta: 0:02:19  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4362
+02/08 16:37:04 - mmengine - INFO - Epoch(train) [19][170/196]  lr: 8.0000e-03  eta: 0:02:19  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.5030
+02/08 16:37:05 - mmengine - INFO - Epoch(train) [19][180/196]  lr: 8.0000e-03  eta: 0:02:19  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5121
+02/08 16:37:05 - mmengine - INFO - Epoch(train) [19][190/196]  lr: 8.0000e-03  eta: 0:02:18  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4801
+02/08 16:37:05 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:05 - mmengine - INFO - Saving checkpoint at 19 epochs
+02/08 16:37:05 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:37:07 - mmengine - INFO - Epoch(val) [19][10/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 364  
+02/08 16:37:07 - mmengine - INFO - Epoch(val) [19][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:37:07 - mmengine - INFO - Epoch(val) [19][30/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 257  
+02/08 16:37:07 - mmengine - INFO - Epoch(val) [19][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:37:07 - mmengine - INFO - Epoch(val) [19][40/40]  accuracy: 80.2600
+02/08 16:37:07 - mmengine - INFO - Epoch(train) [20][ 10/196]  lr: 8.0000e-03  eta: 0:02:18  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.4620
+02/08 16:37:08 - mmengine - INFO - Epoch(train) [20][ 20/196]  lr: 8.0000e-03  eta: 0:02:17  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4403
+02/08 16:37:08 - mmengine - INFO - Epoch(train) [20][ 30/196]  lr: 8.0000e-03  eta: 0:02:17  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4256
+02/08 16:37:08 - mmengine - INFO - Epoch(train) [20][ 40/196]  lr: 8.0000e-03  eta: 0:02:17  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4275
+02/08 16:37:09 - mmengine - INFO - Epoch(train) [20][ 50/196]  lr: 8.0000e-03  eta: 0:02:16  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4077
+02/08 16:37:09 - mmengine - INFO - Epoch(train) [20][ 60/196]  lr: 8.0000e-03  eta: 0:02:16  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.4451
+02/08 16:37:09 - mmengine - INFO - Epoch(train) [20][ 70/196]  lr: 8.0000e-03  eta: 0:02:16  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4497
+02/08 16:37:10 - mmengine - INFO - Epoch(train) [20][ 80/196]  lr: 8.0000e-03  eta: 0:02:15  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4518
+02/08 16:37:10 - mmengine - INFO - Epoch(train) [20][ 90/196]  lr: 8.0000e-03  eta: 0:02:15  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4816
+02/08 16:37:10 - mmengine - INFO - Epoch(train) [20][100/196]  lr: 8.0000e-03  eta: 0:02:15  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4519
+02/08 16:37:11 - mmengine - INFO - Epoch(train) [20][110/196]  lr: 8.0000e-03  eta: 0:02:14  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4633
+02/08 16:37:11 - mmengine - INFO - Epoch(train) [20][120/196]  lr: 8.0000e-03  eta: 0:02:14  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.4902
+02/08 16:37:11 - mmengine - INFO - Epoch(train) [20][130/196]  lr: 8.0000e-03  eta: 0:02:14  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.5418
+02/08 16:37:12 - mmengine - INFO - Epoch(train) [20][140/196]  lr: 8.0000e-03  eta: 0:02:13  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5752
+02/08 16:37:12 - mmengine - INFO - Epoch(train) [20][150/196]  lr: 8.0000e-03  eta: 0:02:13  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5239
+02/08 16:37:12 - mmengine - INFO - Epoch(train) [20][160/196]  lr: 8.0000e-03  eta: 0:02:13  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.5058
+02/08 16:37:13 - mmengine - INFO - Epoch(train) [20][170/196]  lr: 8.0000e-03  eta: 0:02:12  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4927
+02/08 16:37:13 - mmengine - INFO - Epoch(train) [20][180/196]  lr: 8.0000e-03  eta: 0:02:12  time: 0.0340  data_time: 0.0213  memory: 364  loss: 0.4741
+02/08 16:37:13 - mmengine - INFO - Epoch(train) [20][190/196]  lr: 8.0000e-03  eta: 0:02:12  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4655
+02/08 16:37:14 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:14 - mmengine - INFO - Saving checkpoint at 20 epochs
+02/08 16:37:14 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:37:15 - mmengine - INFO - Epoch(val) [20][10/40]    eta: 0:00:00  time: 0.0199  data_time: 0.0147  memory: 364  
+02/08 16:37:15 - mmengine - INFO - Epoch(val) [20][20/40]    eta: 0:00:00  time: 0.0186  data_time: 0.0134  memory: 257  
+02/08 16:37:15 - mmengine - INFO - Epoch(val) [20][30/40]    eta: 0:00:00  time: 0.0186  data_time: 0.0134  memory: 257  
+02/08 16:37:16 - mmengine - INFO - Epoch(val) [20][40/40]    eta: 0:00:00  time: 0.0173  data_time: 0.0125  memory: 257  
+02/08 16:37:16 - mmengine - INFO - Epoch(val) [20][40/40]  accuracy: 80.4700
+02/08 16:37:16 - mmengine - INFO - Epoch(train) [21][ 10/196]  lr: 8.0000e-03  eta: 0:02:11  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4491
+02/08 16:37:16 - mmengine - INFO - Epoch(train) [21][ 20/196]  lr: 8.0000e-03  eta: 0:02:11  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4712
+02/08 16:37:17 - mmengine - INFO - Epoch(train) [21][ 30/196]  lr: 8.0000e-03  eta: 0:02:10  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.4666
+02/08 16:37:17 - mmengine - INFO - Epoch(train) [21][ 40/196]  lr: 8.0000e-03  eta: 0:02:10  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.4477
+02/08 16:37:17 - mmengine - INFO - Epoch(train) [21][ 50/196]  lr: 8.0000e-03  eta: 0:02:10  time: 0.0367  data_time: 0.0239  memory: 364  loss: 0.4692
+02/08 16:37:18 - mmengine - INFO - Epoch(train) [21][ 60/196]  lr: 8.0000e-03  eta: 0:02:10  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4749
+02/08 16:37:18 - mmengine - INFO - Epoch(train) [21][ 70/196]  lr: 8.0000e-03  eta: 0:02:09  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4652
+02/08 16:37:18 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:18 - mmengine - INFO - Epoch(train) [21][ 80/196]  lr: 8.0000e-03  eta: 0:02:09  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4302
+02/08 16:37:19 - mmengine - INFO - Epoch(train) [21][ 90/196]  lr: 8.0000e-03  eta: 0:02:08  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4592
+02/08 16:37:19 - mmengine - INFO - Epoch(train) [21][100/196]  lr: 8.0000e-03  eta: 0:02:08  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4479
+02/08 16:37:19 - mmengine - INFO - Epoch(train) [21][110/196]  lr: 8.0000e-03  eta: 0:02:08  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4568
+02/08 16:37:20 - mmengine - INFO - Epoch(train) [21][120/196]  lr: 8.0000e-03  eta: 0:02:07  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4600
+02/08 16:37:20 - mmengine - INFO - Epoch(train) [21][130/196]  lr: 8.0000e-03  eta: 0:02:07  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.4682
+02/08 16:37:20 - mmengine - INFO - Epoch(train) [21][140/196]  lr: 8.0000e-03  eta: 0:02:07  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4544
+02/08 16:37:21 - mmengine - INFO - Epoch(train) [21][150/196]  lr: 8.0000e-03  eta: 0:02:06  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4257
+02/08 16:37:21 - mmengine - INFO - Epoch(train) [21][160/196]  lr: 8.0000e-03  eta: 0:02:06  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4567
+02/08 16:37:21 - mmengine - INFO - Epoch(train) [21][170/196]  lr: 8.0000e-03  eta: 0:02:06  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4955
+02/08 16:37:22 - mmengine - INFO - Epoch(train) [21][180/196]  lr: 8.0000e-03  eta: 0:02:05  time: 0.0332  data_time: 0.0206  memory: 364  loss: 0.4384
+02/08 16:37:22 - mmengine - INFO - Epoch(train) [21][190/196]  lr: 8.0000e-03  eta: 0:02:05  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.4385
+02/08 16:37:22 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:22 - mmengine - INFO - Saving checkpoint at 21 epochs
+02/08 16:37:22 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:37:23 - mmengine - INFO - Epoch(val) [21][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 364  
+02/08 16:37:24 - mmengine - INFO - Epoch(val) [21][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:37:24 - mmengine - INFO - Epoch(val) [21][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 257  
+02/08 16:37:24 - mmengine - INFO - Epoch(val) [21][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0118  memory: 257  
+02/08 16:37:24 - mmengine - INFO - Epoch(val) [21][40/40]  accuracy: 80.5400
+02/08 16:37:24 - mmengine - INFO - Epoch(train) [22][ 10/196]  lr: 8.0000e-03  eta: 0:02:05  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4874
+02/08 16:37:25 - mmengine - INFO - Epoch(train) [22][ 20/196]  lr: 8.0000e-03  eta: 0:02:04  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4575
+02/08 16:37:25 - mmengine - INFO - Epoch(train) [22][ 30/196]  lr: 8.0000e-03  eta: 0:02:04  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.4579
+02/08 16:37:25 - mmengine - INFO - Epoch(train) [22][ 40/196]  lr: 8.0000e-03  eta: 0:02:04  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4282
+02/08 16:37:26 - mmengine - INFO - Epoch(train) [22][ 50/196]  lr: 8.0000e-03  eta: 0:02:03  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.4210
+02/08 16:37:26 - mmengine - INFO - Epoch(train) [22][ 60/196]  lr: 8.0000e-03  eta: 0:02:03  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4029
+02/08 16:37:26 - mmengine - INFO - Epoch(train) [22][ 70/196]  lr: 8.0000e-03  eta: 0:02:03  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4481
+02/08 16:37:27 - mmengine - INFO - Epoch(train) [22][ 80/196]  lr: 8.0000e-03  eta: 0:02:02  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4317
+02/08 16:37:27 - mmengine - INFO - Epoch(train) [22][ 90/196]  lr: 8.0000e-03  eta: 0:02:02  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.4495
+02/08 16:37:27 - mmengine - INFO - Epoch(train) [22][100/196]  lr: 8.0000e-03  eta: 0:02:01  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4374
+02/08 16:37:28 - mmengine - INFO - Epoch(train) [22][110/196]  lr: 8.0000e-03  eta: 0:02:01  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4501
+02/08 16:37:28 - mmengine - INFO - Epoch(train) [22][120/196]  lr: 8.0000e-03  eta: 0:02:01  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4213
+02/08 16:37:28 - mmengine - INFO - Epoch(train) [22][130/196]  lr: 8.0000e-03  eta: 0:02:00  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4228
+02/08 16:37:29 - mmengine - INFO - Epoch(train) [22][140/196]  lr: 8.0000e-03  eta: 0:02:00  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4276
+02/08 16:37:29 - mmengine - INFO - Epoch(train) [22][150/196]  lr: 8.0000e-03  eta: 0:02:00  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4346
+02/08 16:37:29 - mmengine - INFO - Epoch(train) [22][160/196]  lr: 8.0000e-03  eta: 0:01:59  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.4564
+02/08 16:37:30 - mmengine - INFO - Epoch(train) [22][170/196]  lr: 8.0000e-03  eta: 0:01:59  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4246
+02/08 16:37:30 - mmengine - INFO - Epoch(train) [22][180/196]  lr: 8.0000e-03  eta: 0:01:59  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4278
+02/08 16:37:30 - mmengine - INFO - Epoch(train) [22][190/196]  lr: 8.0000e-03  eta: 0:01:58  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4609
+02/08 16:37:30 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:30 - mmengine - INFO - Saving checkpoint at 22 epochs
+02/08 16:37:31 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:37:32 - mmengine - INFO - Epoch(val) [22][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 364  
+02/08 16:37:32 - mmengine - INFO - Epoch(val) [22][20/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:37:32 - mmengine - INFO - Epoch(val) [22][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:37:32 - mmengine - INFO - Epoch(val) [22][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0119  memory: 257  
+02/08 16:37:32 - mmengine - INFO - Epoch(val) [22][40/40]  accuracy: 76.1200
+02/08 16:37:33 - mmengine - INFO - Epoch(train) [23][ 10/196]  lr: 8.0000e-03  eta: 0:01:58  time: 0.0340  data_time: 0.0213  memory: 364  loss: 1.1204
+02/08 16:37:33 - mmengine - INFO - Epoch(train) [23][ 20/196]  lr: 8.0000e-03  eta: 0:01:58  time: 0.0334  data_time: 0.0206  memory: 364  loss: 1.0625
+02/08 16:37:33 - mmengine - INFO - Epoch(train) [23][ 30/196]  lr: 8.0000e-03  eta: 0:01:57  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.9334
+02/08 16:37:34 - mmengine - INFO - Epoch(train) [23][ 40/196]  lr: 8.0000e-03  eta: 0:01:57  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.7976
+02/08 16:37:34 - mmengine - INFO - Epoch(train) [23][ 50/196]  lr: 8.0000e-03  eta: 0:01:57  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.7284
+02/08 16:37:34 - mmengine - INFO - Epoch(train) [23][ 60/196]  lr: 8.0000e-03  eta: 0:01:56  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.6657
+02/08 16:37:35 - mmengine - INFO - Epoch(train) [23][ 70/196]  lr: 8.0000e-03  eta: 0:01:56  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.6428
+02/08 16:37:35 - mmengine - INFO - Epoch(train) [23][ 80/196]  lr: 8.0000e-03  eta: 0:01:56  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.6213
+02/08 16:37:35 - mmengine - INFO - Epoch(train) [23][ 90/196]  lr: 8.0000e-03  eta: 0:01:55  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.5946
+02/08 16:37:36 - mmengine - INFO - Epoch(train) [23][100/196]  lr: 8.0000e-03  eta: 0:01:55  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.5510
+02/08 16:37:36 - mmengine - INFO - Epoch(train) [23][110/196]  lr: 8.0000e-03  eta: 0:01:55  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5912
+02/08 16:37:36 - mmengine - INFO - Epoch(train) [23][120/196]  lr: 8.0000e-03  eta: 0:01:54  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5651
+02/08 16:37:37 - mmengine - INFO - Epoch(train) [23][130/196]  lr: 8.0000e-03  eta: 0:01:54  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.5269
+02/08 16:37:37 - mmengine - INFO - Epoch(train) [23][140/196]  lr: 8.0000e-03  eta: 0:01:54  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5420
+02/08 16:37:37 - mmengine - INFO - Epoch(train) [23][150/196]  lr: 8.0000e-03  eta: 0:01:53  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.5579
+02/08 16:37:38 - mmengine - INFO - Epoch(train) [23][160/196]  lr: 8.0000e-03  eta: 0:01:53  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5416
+02/08 16:37:38 - mmengine - INFO - Epoch(train) [23][170/196]  lr: 8.0000e-03  eta: 0:01:53  time: 0.0362  data_time: 0.0235  memory: 364  loss: 0.4867
+02/08 16:37:38 - mmengine - INFO - Epoch(train) [23][180/196]  lr: 8.0000e-03  eta: 0:01:52  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5228
+02/08 16:37:39 - mmengine - INFO - Epoch(train) [23][190/196]  lr: 8.0000e-03  eta: 0:01:52  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.5189
+02/08 16:37:39 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:39 - mmengine - INFO - Saving checkpoint at 23 epochs
+02/08 16:37:39 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:37:40 - mmengine - INFO - Epoch(val) [23][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 364  
+02/08 16:37:40 - mmengine - INFO - Epoch(val) [23][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:37:41 - mmengine - INFO - Epoch(val) [23][30/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 257  
+02/08 16:37:41 - mmengine - INFO - Epoch(val) [23][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0118  memory: 257  
+02/08 16:37:41 - mmengine - INFO - Epoch(val) [23][40/40]  accuracy: 80.9400
+02/08 16:37:41 - mmengine - INFO - Epoch(train) [24][ 10/196]  lr: 8.0000e-03  eta: 0:01:51  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4992
+02/08 16:37:41 - mmengine - INFO - Epoch(train) [24][ 20/196]  lr: 8.0000e-03  eta: 0:01:51  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4819
+02/08 16:37:42 - mmengine - INFO - Epoch(train) [24][ 30/196]  lr: 8.0000e-03  eta: 0:01:51  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.4339
+02/08 16:37:42 - mmengine - INFO - Epoch(train) [24][ 40/196]  lr: 8.0000e-03  eta: 0:01:50  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4526
+02/08 16:37:42 - mmengine - INFO - Epoch(train) [24][ 50/196]  lr: 8.0000e-03  eta: 0:01:50  time: 0.0344  data_time: 0.0216  memory: 364  loss: 0.4629
+02/08 16:37:43 - mmengine - INFO - Epoch(train) [24][ 60/196]  lr: 8.0000e-03  eta: 0:01:50  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4662
+02/08 16:37:43 - mmengine - INFO - Epoch(train) [24][ 70/196]  lr: 8.0000e-03  eta: 0:01:49  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.4727
+02/08 16:37:43 - mmengine - INFO - Epoch(train) [24][ 80/196]  lr: 8.0000e-03  eta: 0:01:49  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4232
+02/08 16:37:44 - mmengine - INFO - Epoch(train) [24][ 90/196]  lr: 8.0000e-03  eta: 0:01:49  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4747
+02/08 16:37:44 - mmengine - INFO - Epoch(train) [24][100/196]  lr: 8.0000e-03  eta: 0:01:48  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4641
+02/08 16:37:44 - mmengine - INFO - Epoch(train) [24][110/196]  lr: 8.0000e-03  eta: 0:01:48  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.4612
+02/08 16:37:45 - mmengine - INFO - Epoch(train) [24][120/196]  lr: 8.0000e-03  eta: 0:01:48  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4412
+02/08 16:37:45 - mmengine - INFO - Epoch(train) [24][130/196]  lr: 8.0000e-03  eta: 0:01:47  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4566
+02/08 16:37:45 - mmengine - INFO - Epoch(train) [24][140/196]  lr: 8.0000e-03  eta: 0:01:47  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4491
+02/08 16:37:46 - mmengine - INFO - Epoch(train) [24][150/196]  lr: 8.0000e-03  eta: 0:01:47  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4779
+02/08 16:37:46 - mmengine - INFO - Epoch(train) [24][160/196]  lr: 8.0000e-03  eta: 0:01:46  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4835
+02/08 16:37:46 - mmengine - INFO - Epoch(train) [24][170/196]  lr: 8.0000e-03  eta: 0:01:46  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4809
+02/08 16:37:47 - mmengine - INFO - Epoch(train) [24][180/196]  lr: 8.0000e-03  eta: 0:01:46  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.4327
+02/08 16:37:47 - mmengine - INFO - Epoch(train) [24][190/196]  lr: 8.0000e-03  eta: 0:01:45  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4619
+02/08 16:37:47 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:47 - mmengine - INFO - Saving checkpoint at 24 epochs
+02/08 16:37:47 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:37:49 - mmengine - INFO - Epoch(val) [24][10/40]    eta: 0:00:00  time: 0.0188  data_time: 0.0137  memory: 364  
+02/08 16:37:49 - mmengine - INFO - Epoch(val) [24][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:37:49 - mmengine - INFO - Epoch(val) [24][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:37:49 - mmengine - INFO - Epoch(val) [24][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:37:49 - mmengine - INFO - Epoch(val) [24][40/40]  accuracy: 80.9700
+02/08 16:37:49 - mmengine - INFO - Epoch(train) [25][ 10/196]  lr: 8.0000e-03  eta: 0:01:45  time: 0.0341  data_time: 0.0213  memory: 364  loss: 0.4204
+02/08 16:37:50 - mmengine - INFO - Epoch(train) [25][ 20/196]  lr: 8.0000e-03  eta: 0:01:44  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4362
+02/08 16:37:50 - mmengine - INFO - Epoch(train) [25][ 30/196]  lr: 8.0000e-03  eta: 0:01:44  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4424
+02/08 16:37:50 - mmengine - INFO - Epoch(train) [25][ 40/196]  lr: 8.0000e-03  eta: 0:01:44  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4040
+02/08 16:37:51 - mmengine - INFO - Epoch(train) [25][ 50/196]  lr: 8.0000e-03  eta: 0:01:43  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.4265
+02/08 16:37:51 - mmengine - INFO - Epoch(train) [25][ 60/196]  lr: 8.0000e-03  eta: 0:01:43  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.4005
+02/08 16:37:51 - mmengine - INFO - Epoch(train) [25][ 70/196]  lr: 8.0000e-03  eta: 0:01:43  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4143
+02/08 16:37:52 - mmengine - INFO - Epoch(train) [25][ 80/196]  lr: 8.0000e-03  eta: 0:01:42  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3984
+02/08 16:37:52 - mmengine - INFO - Epoch(train) [25][ 90/196]  lr: 8.0000e-03  eta: 0:01:42  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.4268
+02/08 16:37:52 - mmengine - INFO - Epoch(train) [25][100/196]  lr: 8.0000e-03  eta: 0:01:42  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4562
+02/08 16:37:53 - mmengine - INFO - Epoch(train) [25][110/196]  lr: 8.0000e-03  eta: 0:01:41  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.4303
+02/08 16:37:53 - mmengine - INFO - Epoch(train) [25][120/196]  lr: 8.0000e-03  eta: 0:01:41  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4052
+02/08 16:37:54 - mmengine - INFO - Epoch(train) [25][130/196]  lr: 8.0000e-03  eta: 0:01:41  time: 0.0348  data_time: 0.0219  memory: 364  loss: 0.4011
+02/08 16:37:54 - mmengine - INFO - Epoch(train) [25][140/196]  lr: 8.0000e-03  eta: 0:01:40  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4582
+02/08 16:37:54 - mmengine - INFO - Epoch(train) [25][150/196]  lr: 8.0000e-03  eta: 0:01:40  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4316
+02/08 16:37:55 - mmengine - INFO - Epoch(train) [25][160/196]  lr: 8.0000e-03  eta: 0:01:40  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4499
+02/08 16:37:55 - mmengine - INFO - Epoch(train) [25][170/196]  lr: 8.0000e-03  eta: 0:01:39  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4063
+02/08 16:37:55 - mmengine - INFO - Epoch(train) [25][180/196]  lr: 8.0000e-03  eta: 0:01:39  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4270
+02/08 16:37:56 - mmengine - INFO - Epoch(train) [25][190/196]  lr: 8.0000e-03  eta: 0:01:39  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4178
+02/08 16:37:56 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:37:56 - mmengine - INFO - Saving checkpoint at 25 epochs
+02/08 16:37:56 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:37:57 - mmengine - INFO - Epoch(val) [25][10/40]    eta: 0:00:00  time: 0.0189  data_time: 0.0138  memory: 364  
+02/08 16:37:58 - mmengine - INFO - Epoch(val) [25][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 257  
+02/08 16:37:58 - mmengine - INFO - Epoch(val) [25][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0129  memory: 257  
+02/08 16:37:58 - mmengine - INFO - Epoch(val) [25][40/40]    eta: 0:00:00  time: 0.0166  data_time: 0.0119  memory: 257  
+02/08 16:37:58 - mmengine - INFO - Epoch(val) [25][40/40]  accuracy: 81.3300
+02/08 16:37:58 - mmengine - INFO - Epoch(train) [26][ 10/196]  lr: 8.0000e-03  eta: 0:01:38  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3936
+02/08 16:37:59 - mmengine - INFO - Epoch(train) [26][ 20/196]  lr: 8.0000e-03  eta: 0:01:38  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4025
+02/08 16:37:59 - mmengine - INFO - Epoch(train) [26][ 30/196]  lr: 8.0000e-03  eta: 0:01:37  time: 0.0341  data_time: 0.0214  memory: 364  loss: 0.4169
+02/08 16:37:59 - mmengine - INFO - Epoch(train) [26][ 40/196]  lr: 8.0000e-03  eta: 0:01:37  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3997
+02/08 16:38:00 - mmengine - INFO - Epoch(train) [26][ 50/196]  lr: 8.0000e-03  eta: 0:01:37  time: 0.0362  data_time: 0.0235  memory: 364  loss: 0.4128
+02/08 16:38:00 - mmengine - INFO - Epoch(train) [26][ 60/196]  lr: 8.0000e-03  eta: 0:01:36  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4341
+02/08 16:38:00 - mmengine - INFO - Epoch(train) [26][ 70/196]  lr: 8.0000e-03  eta: 0:01:36  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4203
+02/08 16:38:01 - mmengine - INFO - Epoch(train) [26][ 80/196]  lr: 8.0000e-03  eta: 0:01:36  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4206
+02/08 16:38:01 - mmengine - INFO - Epoch(train) [26][ 90/196]  lr: 8.0000e-03  eta: 0:01:35  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3963
+02/08 16:38:01 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:01 - mmengine - INFO - Epoch(train) [26][100/196]  lr: 8.0000e-03  eta: 0:01:35  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.3870
+02/08 16:38:02 - mmengine - INFO - Epoch(train) [26][110/196]  lr: 8.0000e-03  eta: 0:01:35  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3827
+02/08 16:38:02 - mmengine - INFO - Epoch(train) [26][120/196]  lr: 8.0000e-03  eta: 0:01:34  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3879
+02/08 16:38:02 - mmengine - INFO - Epoch(train) [26][130/196]  lr: 8.0000e-03  eta: 0:01:34  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4303
+02/08 16:38:03 - mmengine - INFO - Epoch(train) [26][140/196]  lr: 8.0000e-03  eta: 0:01:34  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4392
+02/08 16:38:03 - mmengine - INFO - Epoch(train) [26][150/196]  lr: 8.0000e-03  eta: 0:01:33  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.3999
+02/08 16:38:03 - mmengine - INFO - Epoch(train) [26][160/196]  lr: 8.0000e-03  eta: 0:01:33  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3914
+02/08 16:38:04 - mmengine - INFO - Epoch(train) [26][170/196]  lr: 8.0000e-03  eta: 0:01:33  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3962
+02/08 16:38:04 - mmengine - INFO - Epoch(train) [26][180/196]  lr: 8.0000e-03  eta: 0:01:32  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.4140
+02/08 16:38:04 - mmengine - INFO - Epoch(train) [26][190/196]  lr: 8.0000e-03  eta: 0:01:32  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3982
+02/08 16:38:05 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:05 - mmengine - INFO - Saving checkpoint at 26 epochs
+02/08 16:38:05 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:38:06 - mmengine - INFO - Epoch(val) [26][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 364  
+02/08 16:38:06 - mmengine - INFO - Epoch(val) [26][20/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:38:06 - mmengine - INFO - Epoch(val) [26][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:38:07 - mmengine - INFO - Epoch(val) [26][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:38:07 - mmengine - INFO - Epoch(val) [26][40/40]  accuracy: 82.8500
+02/08 16:38:07 - mmengine - INFO - Epoch(train) [27][ 10/196]  lr: 8.0000e-03  eta: 0:01:31  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.3747
+02/08 16:38:07 - mmengine - INFO - Epoch(train) [27][ 20/196]  lr: 8.0000e-03  eta: 0:01:31  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3959
+02/08 16:38:08 - mmengine - INFO - Epoch(train) [27][ 30/196]  lr: 8.0000e-03  eta: 0:01:31  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3673
+02/08 16:38:08 - mmengine - INFO - Epoch(train) [27][ 40/196]  lr: 8.0000e-03  eta: 0:01:30  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3918
+02/08 16:38:08 - mmengine - INFO - Epoch(train) [27][ 50/196]  lr: 8.0000e-03  eta: 0:01:30  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3961
+02/08 16:38:09 - mmengine - INFO - Epoch(train) [27][ 60/196]  lr: 8.0000e-03  eta: 0:01:30  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3750
+02/08 16:38:09 - mmengine - INFO - Epoch(train) [27][ 70/196]  lr: 8.0000e-03  eta: 0:01:29  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3526
+02/08 16:38:09 - mmengine - INFO - Epoch(train) [27][ 80/196]  lr: 8.0000e-03  eta: 0:01:29  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.4296
+02/08 16:38:10 - mmengine - INFO - Epoch(train) [27][ 90/196]  lr: 8.0000e-03  eta: 0:01:29  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4250
+02/08 16:38:10 - mmengine - INFO - Epoch(train) [27][100/196]  lr: 8.0000e-03  eta: 0:01:28  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.4074
+02/08 16:38:10 - mmengine - INFO - Epoch(train) [27][110/196]  lr: 8.0000e-03  eta: 0:01:28  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3990
+02/08 16:38:11 - mmengine - INFO - Epoch(train) [27][120/196]  lr: 8.0000e-03  eta: 0:01:28  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3793
+02/08 16:38:11 - mmengine - INFO - Epoch(train) [27][130/196]  lr: 8.0000e-03  eta: 0:01:27  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.4065
+02/08 16:38:11 - mmengine - INFO - Epoch(train) [27][140/196]  lr: 8.0000e-03  eta: 0:01:27  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3888
+02/08 16:38:12 - mmengine - INFO - Epoch(train) [27][150/196]  lr: 8.0000e-03  eta: 0:01:27  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3905
+02/08 16:38:12 - mmengine - INFO - Epoch(train) [27][160/196]  lr: 8.0000e-03  eta: 0:01:26  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.4134
+02/08 16:38:12 - mmengine - INFO - Epoch(train) [27][170/196]  lr: 8.0000e-03  eta: 0:01:26  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3905
+02/08 16:38:13 - mmengine - INFO - Epoch(train) [27][180/196]  lr: 8.0000e-03  eta: 0:01:26  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3794
+02/08 16:38:13 - mmengine - INFO - Epoch(train) [27][190/196]  lr: 8.0000e-03  eta: 0:01:25  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3954
+02/08 16:38:13 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:13 - mmengine - INFO - Saving checkpoint at 27 epochs
+02/08 16:38:13 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:38:14 - mmengine - INFO - Epoch(val) [27][10/40]    eta: 0:00:00  time: 0.0191  data_time: 0.0139  memory: 364  
+02/08 16:38:15 - mmengine - INFO - Epoch(val) [27][20/40]    eta: 0:00:00  time: 0.0188  data_time: 0.0136  memory: 257  
+02/08 16:38:15 - mmengine - INFO - Epoch(val) [27][30/40]    eta: 0:00:00  time: 0.0191  data_time: 0.0139  memory: 257  
+02/08 16:38:15 - mmengine - INFO - Epoch(val) [27][40/40]    eta: 0:00:00  time: 0.0173  data_time: 0.0125  memory: 257  
+02/08 16:38:15 - mmengine - INFO - Epoch(val) [27][40/40]  accuracy: 81.8700
+02/08 16:38:15 - mmengine - INFO - Epoch(train) [28][ 10/196]  lr: 8.0000e-03  eta: 0:01:25  time: 0.0349  data_time: 0.0220  memory: 364  loss: 0.3887
+02/08 16:38:16 - mmengine - INFO - Epoch(train) [28][ 20/196]  lr: 8.0000e-03  eta: 0:01:25  time: 0.0347  data_time: 0.0218  memory: 364  loss: 0.3869
+02/08 16:38:16 - mmengine - INFO - Epoch(train) [28][ 30/196]  lr: 8.0000e-03  eta: 0:01:24  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3544
+02/08 16:38:16 - mmengine - INFO - Epoch(train) [28][ 40/196]  lr: 8.0000e-03  eta: 0:01:24  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3601
+02/08 16:38:17 - mmengine - INFO - Epoch(train) [28][ 50/196]  lr: 8.0000e-03  eta: 0:01:24  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3891
+02/08 16:38:17 - mmengine - INFO - Epoch(train) [28][ 60/196]  lr: 8.0000e-03  eta: 0:01:23  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3336
+02/08 16:38:17 - mmengine - INFO - Epoch(train) [28][ 70/196]  lr: 8.0000e-03  eta: 0:01:23  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3872
+02/08 16:38:18 - mmengine - INFO - Epoch(train) [28][ 80/196]  lr: 8.0000e-03  eta: 0:01:23  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3948
+02/08 16:38:18 - mmengine - INFO - Epoch(train) [28][ 90/196]  lr: 8.0000e-03  eta: 0:01:22  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3957
+02/08 16:38:18 - mmengine - INFO - Epoch(train) [28][100/196]  lr: 8.0000e-03  eta: 0:01:22  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3749
+02/08 16:38:19 - mmengine - INFO - Epoch(train) [28][110/196]  lr: 8.0000e-03  eta: 0:01:22  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3906
+02/08 16:38:19 - mmengine - INFO - Epoch(train) [28][120/196]  lr: 8.0000e-03  eta: 0:01:21  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3878
+02/08 16:38:19 - mmengine - INFO - Epoch(train) [28][130/196]  lr: 8.0000e-03  eta: 0:01:21  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3739
+02/08 16:38:20 - mmengine - INFO - Epoch(train) [28][140/196]  lr: 8.0000e-03  eta: 0:01:21  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.4069
+02/08 16:38:20 - mmengine - INFO - Epoch(train) [28][150/196]  lr: 8.0000e-03  eta: 0:01:20  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.4036
+02/08 16:38:20 - mmengine - INFO - Epoch(train) [28][160/196]  lr: 8.0000e-03  eta: 0:01:20  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4032
+02/08 16:38:21 - mmengine - INFO - Epoch(train) [28][170/196]  lr: 8.0000e-03  eta: 0:01:20  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.4083
+02/08 16:38:21 - mmengine - INFO - Epoch(train) [28][180/196]  lr: 8.0000e-03  eta: 0:01:19  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.4045
+02/08 16:38:21 - mmengine - INFO - Epoch(train) [28][190/196]  lr: 8.0000e-03  eta: 0:01:19  time: 0.0362  data_time: 0.0235  memory: 364  loss: 0.4064
+02/08 16:38:22 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:22 - mmengine - INFO - Saving checkpoint at 28 epochs
+02/08 16:38:22 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:38:23 - mmengine - INFO - Epoch(val) [28][10/40]    eta: 0:00:00  time: 0.0189  data_time: 0.0138  memory: 364  
+02/08 16:38:23 - mmengine - INFO - Epoch(val) [28][20/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:38:23 - mmengine - INFO - Epoch(val) [28][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:38:24 - mmengine - INFO - Epoch(val) [28][40/40]    eta: 0:00:00  time: 0.0167  data_time: 0.0120  memory: 257  
+02/08 16:38:24 - mmengine - INFO - Epoch(val) [28][40/40]  accuracy: 83.0700
+02/08 16:38:24 - mmengine - INFO - Epoch(train) [29][ 10/196]  lr: 8.0000e-03  eta: 0:01:18  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3524
+02/08 16:38:24 - mmengine - INFO - Epoch(train) [29][ 20/196]  lr: 8.0000e-03  eta: 0:01:18  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3505
+02/08 16:38:25 - mmengine - INFO - Epoch(train) [29][ 30/196]  lr: 8.0000e-03  eta: 0:01:18  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3521
+02/08 16:38:25 - mmengine - INFO - Epoch(train) [29][ 40/196]  lr: 8.0000e-03  eta: 0:01:17  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3728
+02/08 16:38:25 - mmengine - INFO - Epoch(train) [29][ 50/196]  lr: 8.0000e-03  eta: 0:01:17  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3572
+02/08 16:38:26 - mmengine - INFO - Epoch(train) [29][ 60/196]  lr: 8.0000e-03  eta: 0:01:17  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3516
+02/08 16:38:26 - mmengine - INFO - Epoch(train) [29][ 70/196]  lr: 8.0000e-03  eta: 0:01:16  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3763
+02/08 16:38:26 - mmengine - INFO - Epoch(train) [29][ 80/196]  lr: 8.0000e-03  eta: 0:01:16  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3870
+02/08 16:38:27 - mmengine - INFO - Epoch(train) [29][ 90/196]  lr: 8.0000e-03  eta: 0:01:16  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3805
+02/08 16:38:27 - mmengine - INFO - Epoch(train) [29][100/196]  lr: 8.0000e-03  eta: 0:01:15  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3873
+02/08 16:38:27 - mmengine - INFO - Epoch(train) [29][110/196]  lr: 8.0000e-03  eta: 0:01:15  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3602
+02/08 16:38:28 - mmengine - INFO - Epoch(train) [29][120/196]  lr: 8.0000e-03  eta: 0:01:15  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3577
+02/08 16:38:28 - mmengine - INFO - Epoch(train) [29][130/196]  lr: 8.0000e-03  eta: 0:01:14  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3941
+02/08 16:38:28 - mmengine - INFO - Epoch(train) [29][140/196]  lr: 8.0000e-03  eta: 0:01:14  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3691
+02/08 16:38:29 - mmengine - INFO - Epoch(train) [29][150/196]  lr: 8.0000e-03  eta: 0:01:14  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3647
+02/08 16:38:29 - mmengine - INFO - Epoch(train) [29][160/196]  lr: 8.0000e-03  eta: 0:01:13  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3631
+02/08 16:38:29 - mmengine - INFO - Epoch(train) [29][170/196]  lr: 8.0000e-03  eta: 0:01:13  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.3565
+02/08 16:38:30 - mmengine - INFO - Epoch(train) [29][180/196]  lr: 8.0000e-03  eta: 0:01:13  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.3728
+02/08 16:38:30 - mmengine - INFO - Epoch(train) [29][190/196]  lr: 8.0000e-03  eta: 0:01:12  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3864
+02/08 16:38:30 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:30 - mmengine - INFO - Saving checkpoint at 29 epochs
+02/08 16:38:30 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:38:31 - mmengine - INFO - Epoch(val) [29][10/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 364  
+02/08 16:38:32 - mmengine - INFO - Epoch(val) [29][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0129  memory: 257  
+02/08 16:38:32 - mmengine - INFO - Epoch(val) [29][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:38:32 - mmengine - INFO - Epoch(val) [29][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0118  memory: 257  
+02/08 16:38:32 - mmengine - INFO - Epoch(val) [29][40/40]  accuracy: 82.8700
+02/08 16:38:32 - mmengine - INFO - Epoch(train) [30][ 10/196]  lr: 8.0000e-03  eta: 0:01:12  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3533
+02/08 16:38:33 - mmengine - INFO - Epoch(train) [30][ 20/196]  lr: 8.0000e-03  eta: 0:01:11  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3634
+02/08 16:38:33 - mmengine - INFO - Epoch(train) [30][ 30/196]  lr: 8.0000e-03  eta: 0:01:11  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3436
+02/08 16:38:33 - mmengine - INFO - Epoch(train) [30][ 40/196]  lr: 8.0000e-03  eta: 0:01:11  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3592
+02/08 16:38:34 - mmengine - INFO - Epoch(train) [30][ 50/196]  lr: 8.0000e-03  eta: 0:01:10  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3406
+02/08 16:38:34 - mmengine - INFO - Epoch(train) [30][ 60/196]  lr: 8.0000e-03  eta: 0:01:10  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3439
+02/08 16:38:34 - mmengine - INFO - Epoch(train) [30][ 70/196]  lr: 8.0000e-03  eta: 0:01:10  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3713
+02/08 16:38:35 - mmengine - INFO - Epoch(train) [30][ 80/196]  lr: 8.0000e-03  eta: 0:01:09  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3608
+02/08 16:38:35 - mmengine - INFO - Epoch(train) [30][ 90/196]  lr: 8.0000e-03  eta: 0:01:09  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3924
+02/08 16:38:35 - mmengine - INFO - Epoch(train) [30][100/196]  lr: 8.0000e-03  eta: 0:01:09  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3850
+02/08 16:38:36 - mmengine - INFO - Epoch(train) [30][110/196]  lr: 8.0000e-03  eta: 0:01:08  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3773
+02/08 16:38:36 - mmengine - INFO - Epoch(train) [30][120/196]  lr: 8.0000e-03  eta: 0:01:08  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3419
+02/08 16:38:36 - mmengine - INFO - Epoch(train) [30][130/196]  lr: 8.0000e-03  eta: 0:01:08  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3647
+02/08 16:38:37 - mmengine - INFO - Epoch(train) [30][140/196]  lr: 8.0000e-03  eta: 0:01:07  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4014
+02/08 16:38:37 - mmengine - INFO - Epoch(train) [30][150/196]  lr: 8.0000e-03  eta: 0:01:07  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3800
+02/08 16:38:37 - mmengine - INFO - Epoch(train) [30][160/196]  lr: 8.0000e-03  eta: 0:01:07  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3752
+02/08 16:38:38 - mmengine - INFO - Epoch(train) [30][170/196]  lr: 8.0000e-03  eta: 0:01:06  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3819
+02/08 16:38:38 - mmengine - INFO - Epoch(train) [30][180/196]  lr: 8.0000e-03  eta: 0:01:06  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3430
+02/08 16:38:38 - mmengine - INFO - Epoch(train) [30][190/196]  lr: 8.0000e-03  eta: 0:01:06  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3630
+02/08 16:38:38 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:38 - mmengine - INFO - Saving checkpoint at 30 epochs
+02/08 16:38:39 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:38:40 - mmengine - INFO - Epoch(val) [30][10/40]    eta: 0:00:00  time: 0.0188  data_time: 0.0137  memory: 364  
+02/08 16:38:40 - mmengine - INFO - Epoch(val) [30][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0129  memory: 257  
+02/08 16:38:40 - mmengine - INFO - Epoch(val) [30][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:38:40 - mmengine - INFO - Epoch(val) [30][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0118  memory: 257  
+02/08 16:38:40 - mmengine - INFO - Epoch(val) [30][40/40]  accuracy: 82.1300
+02/08 16:38:41 - mmengine - INFO - Epoch(train) [31][ 10/196]  lr: 8.0000e-03  eta: 0:01:05  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3826
+02/08 16:38:41 - mmengine - INFO - Epoch(train) [31][ 20/196]  lr: 8.0000e-03  eta: 0:01:05  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3219
+02/08 16:38:41 - mmengine - INFO - Epoch(train) [31][ 30/196]  lr: 8.0000e-03  eta: 0:01:04  time: 0.0341  data_time: 0.0213  memory: 364  loss: 0.3616
+02/08 16:38:42 - mmengine - INFO - Epoch(train) [31][ 40/196]  lr: 8.0000e-03  eta: 0:01:04  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3639
+02/08 16:38:42 - mmengine - INFO - Epoch(train) [31][ 50/196]  lr: 8.0000e-03  eta: 0:01:04  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3579
+02/08 16:38:42 - mmengine - INFO - Epoch(train) [31][ 60/196]  lr: 8.0000e-03  eta: 0:01:03  time: 0.0341  data_time: 0.0214  memory: 364  loss: 0.3592
+02/08 16:38:43 - mmengine - INFO - Epoch(train) [31][ 70/196]  lr: 8.0000e-03  eta: 0:01:03  time: 0.0366  data_time: 0.0239  memory: 364  loss: 0.3453
+02/08 16:38:43 - mmengine - INFO - Epoch(train) [31][ 80/196]  lr: 8.0000e-03  eta: 0:01:03  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3755
+02/08 16:38:43 - mmengine - INFO - Epoch(train) [31][ 90/196]  lr: 8.0000e-03  eta: 0:01:02  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3434
+02/08 16:38:44 - mmengine - INFO - Epoch(train) [31][100/196]  lr: 8.0000e-03  eta: 0:01:02  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3472
+02/08 16:38:44 - mmengine - INFO - Epoch(train) [31][110/196]  lr: 8.0000e-03  eta: 0:01:02  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3345
+02/08 16:38:44 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:44 - mmengine - INFO - Epoch(train) [31][120/196]  lr: 8.0000e-03  eta: 0:01:01  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3532
+02/08 16:38:45 - mmengine - INFO - Epoch(train) [31][130/196]  lr: 8.0000e-03  eta: 0:01:01  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3511
+02/08 16:38:45 - mmengine - INFO - Epoch(train) [31][140/196]  lr: 8.0000e-03  eta: 0:01:01  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3605
+02/08 16:38:45 - mmengine - INFO - Epoch(train) [31][150/196]  lr: 8.0000e-03  eta: 0:01:00  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3408
+02/08 16:38:46 - mmengine - INFO - Epoch(train) [31][160/196]  lr: 8.0000e-03  eta: 0:01:00  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3443
+02/08 16:38:46 - mmengine - INFO - Epoch(train) [31][170/196]  lr: 8.0000e-03  eta: 0:01:00  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3594
+02/08 16:38:46 - mmengine - INFO - Epoch(train) [31][180/196]  lr: 8.0000e-03  eta: 0:00:59  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3419
+02/08 16:38:47 - mmengine - INFO - Epoch(train) [31][190/196]  lr: 8.0000e-03  eta: 0:00:59  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3846
+02/08 16:38:47 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:47 - mmengine - INFO - Saving checkpoint at 31 epochs
+02/08 16:38:47 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:38:48 - mmengine - INFO - Epoch(val) [31][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0133  memory: 364  
+02/08 16:38:48 - mmengine - INFO - Epoch(val) [31][20/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 257  
+02/08 16:38:49 - mmengine - INFO - Epoch(val) [31][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:38:49 - mmengine - INFO - Epoch(val) [31][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0118  memory: 257  
+02/08 16:38:49 - mmengine - INFO - Epoch(val) [31][40/40]  accuracy: 79.9200
+02/08 16:38:49 - mmengine - INFO - Epoch(train) [32][ 10/196]  lr: 8.0000e-03  eta: 0:00:59  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.6247
+02/08 16:38:49 - mmengine - INFO - Epoch(train) [32][ 20/196]  lr: 8.0000e-03  eta: 0:00:58  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.6396
+02/08 16:38:50 - mmengine - INFO - Epoch(train) [32][ 30/196]  lr: 8.0000e-03  eta: 0:00:58  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.5507
+02/08 16:38:50 - mmengine - INFO - Epoch(train) [32][ 40/196]  lr: 8.0000e-03  eta: 0:00:57  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.4425
+02/08 16:38:50 - mmengine - INFO - Epoch(train) [32][ 50/196]  lr: 8.0000e-03  eta: 0:00:57  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4156
+02/08 16:38:51 - mmengine - INFO - Epoch(train) [32][ 60/196]  lr: 8.0000e-03  eta: 0:00:57  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.4296
+02/08 16:38:51 - mmengine - INFO - Epoch(train) [32][ 70/196]  lr: 8.0000e-03  eta: 0:00:56  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.4267
+02/08 16:38:51 - mmengine - INFO - Epoch(train) [32][ 80/196]  lr: 8.0000e-03  eta: 0:00:56  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.4095
+02/08 16:38:52 - mmengine - INFO - Epoch(train) [32][ 90/196]  lr: 8.0000e-03  eta: 0:00:56  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.4095
+02/08 16:38:52 - mmengine - INFO - Epoch(train) [32][100/196]  lr: 8.0000e-03  eta: 0:00:55  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.4190
+02/08 16:38:52 - mmengine - INFO - Epoch(train) [32][110/196]  lr: 8.0000e-03  eta: 0:00:55  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3650
+02/08 16:38:53 - mmengine - INFO - Epoch(train) [32][120/196]  lr: 8.0000e-03  eta: 0:00:55  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3502
+02/08 16:38:53 - mmengine - INFO - Epoch(train) [32][130/196]  lr: 8.0000e-03  eta: 0:00:54  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.4231
+02/08 16:38:53 - mmengine - INFO - Epoch(train) [32][140/196]  lr: 8.0000e-03  eta: 0:00:54  time: 0.0345  data_time: 0.0217  memory: 364  loss: 0.3788
+02/08 16:38:54 - mmengine - INFO - Epoch(train) [32][150/196]  lr: 8.0000e-03  eta: 0:00:54  time: 0.0342  data_time: 0.0214  memory: 364  loss: 0.3851
+02/08 16:38:54 - mmengine - INFO - Epoch(train) [32][160/196]  lr: 8.0000e-03  eta: 0:00:53  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3737
+02/08 16:38:55 - mmengine - INFO - Epoch(train) [32][170/196]  lr: 8.0000e-03  eta: 0:00:53  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3670
+02/08 16:38:55 - mmengine - INFO - Epoch(train) [32][180/196]  lr: 8.0000e-03  eta: 0:00:53  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3781
+02/08 16:38:55 - mmengine - INFO - Epoch(train) [32][190/196]  lr: 8.0000e-03  eta: 0:00:52  time: 0.0333  data_time: 0.0205  memory: 364  loss: 0.3658
+02/08 16:38:55 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:38:55 - mmengine - INFO - Saving checkpoint at 32 epochs
+02/08 16:38:55 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:38:57 - mmengine - INFO - Epoch(val) [32][10/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 364  
+02/08 16:38:57 - mmengine - INFO - Epoch(val) [32][20/40]    eta: 0:00:00  time: 0.0178  data_time: 0.0129  memory: 257  
+02/08 16:38:57 - mmengine - INFO - Epoch(val) [32][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:38:57 - mmengine - INFO - Epoch(val) [32][40/40]    eta: 0:00:00  time: 0.0167  data_time: 0.0120  memory: 257  
+02/08 16:38:57 - mmengine - INFO - Epoch(val) [32][40/40]  accuracy: 83.0000
+02/08 16:38:58 - mmengine - INFO - Epoch(train) [33][ 10/196]  lr: 8.0000e-03  eta: 0:00:52  time: 0.0345  data_time: 0.0217  memory: 364  loss: 0.3617
+02/08 16:38:58 - mmengine - INFO - Epoch(train) [33][ 20/196]  lr: 8.0000e-03  eta: 0:00:52  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3715
+02/08 16:38:58 - mmengine - INFO - Epoch(train) [33][ 30/196]  lr: 8.0000e-03  eta: 0:00:51  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3126
+02/08 16:38:59 - mmengine - INFO - Epoch(train) [33][ 40/196]  lr: 8.0000e-03  eta: 0:00:51  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3614
+02/08 16:38:59 - mmengine - INFO - Epoch(train) [33][ 50/196]  lr: 8.0000e-03  eta: 0:00:51  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3456
+02/08 16:38:59 - mmengine - INFO - Epoch(train) [33][ 60/196]  lr: 8.0000e-03  eta: 0:00:50  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3836
+02/08 16:39:00 - mmengine - INFO - Epoch(train) [33][ 70/196]  lr: 8.0000e-03  eta: 0:00:50  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3508
+02/08 16:39:00 - mmengine - INFO - Epoch(train) [33][ 80/196]  lr: 8.0000e-03  eta: 0:00:50  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3329
+02/08 16:39:00 - mmengine - INFO - Epoch(train) [33][ 90/196]  lr: 8.0000e-03  eta: 0:00:49  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3399
+02/08 16:39:01 - mmengine - INFO - Epoch(train) [33][100/196]  lr: 8.0000e-03  eta: 0:00:49  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3445
+02/08 16:39:01 - mmengine - INFO - Epoch(train) [33][110/196]  lr: 8.0000e-03  eta: 0:00:49  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3852
+02/08 16:39:01 - mmengine - INFO - Epoch(train) [33][120/196]  lr: 8.0000e-03  eta: 0:00:48  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3282
+02/08 16:39:02 - mmengine - INFO - Epoch(train) [33][130/196]  lr: 8.0000e-03  eta: 0:00:48  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3567
+02/08 16:39:02 - mmengine - INFO - Epoch(train) [33][140/196]  lr: 8.0000e-03  eta: 0:00:48  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3757
+02/08 16:39:02 - mmengine - INFO - Epoch(train) [33][150/196]  lr: 8.0000e-03  eta: 0:00:47  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3451
+02/08 16:39:03 - mmengine - INFO - Epoch(train) [33][160/196]  lr: 8.0000e-03  eta: 0:00:47  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3796
+02/08 16:39:03 - mmengine - INFO - Epoch(train) [33][170/196]  lr: 8.0000e-03  eta: 0:00:47  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3602
+02/08 16:39:03 - mmengine - INFO - Epoch(train) [33][180/196]  lr: 8.0000e-03  eta: 0:00:46  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3386
+02/08 16:39:04 - mmengine - INFO - Epoch(train) [33][190/196]  lr: 8.0000e-03  eta: 0:00:46  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3430
+02/08 16:39:04 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:04 - mmengine - INFO - Saving checkpoint at 33 epochs
+02/08 16:39:04 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:39:05 - mmengine - INFO - Epoch(val) [33][10/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 364  
+02/08 16:39:05 - mmengine - INFO - Epoch(val) [33][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:39:05 - mmengine - INFO - Epoch(val) [33][30/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 257  
+02/08 16:39:06 - mmengine - INFO - Epoch(val) [33][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:39:06 - mmengine - INFO - Epoch(val) [33][40/40]  accuracy: 82.3200
+02/08 16:39:06 - mmengine - INFO - Epoch(train) [34][ 10/196]  lr: 8.0000e-03  eta: 0:00:45  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3465
+02/08 16:39:06 - mmengine - INFO - Epoch(train) [34][ 20/196]  lr: 8.0000e-03  eta: 0:00:45  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3459
+02/08 16:39:07 - mmengine - INFO - Epoch(train) [34][ 30/196]  lr: 8.0000e-03  eta: 0:00:45  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3224
+02/08 16:39:07 - mmengine - INFO - Epoch(train) [34][ 40/196]  lr: 8.0000e-03  eta: 0:00:44  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3357
+02/08 16:39:07 - mmengine - INFO - Epoch(train) [34][ 50/196]  lr: 8.0000e-03  eta: 0:00:44  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3226
+02/08 16:39:08 - mmengine - INFO - Epoch(train) [34][ 60/196]  lr: 8.0000e-03  eta: 0:00:44  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3376
+02/08 16:39:08 - mmengine - INFO - Epoch(train) [34][ 70/196]  lr: 8.0000e-03  eta: 0:00:43  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3435
+02/08 16:39:08 - mmengine - INFO - Epoch(train) [34][ 80/196]  lr: 8.0000e-03  eta: 0:00:43  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3284
+02/08 16:39:09 - mmengine - INFO - Epoch(train) [34][ 90/196]  lr: 8.0000e-03  eta: 0:00:43  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3216
+02/08 16:39:09 - mmengine - INFO - Epoch(train) [34][100/196]  lr: 8.0000e-03  eta: 0:00:42  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3356
+02/08 16:39:09 - mmengine - INFO - Epoch(train) [34][110/196]  lr: 8.0000e-03  eta: 0:00:42  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3252
+02/08 16:39:10 - mmengine - INFO - Epoch(train) [34][120/196]  lr: 8.0000e-03  eta: 0:00:42  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3555
+02/08 16:39:10 - mmengine - INFO - Epoch(train) [34][130/196]  lr: 8.0000e-03  eta: 0:00:41  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3449
+02/08 16:39:10 - mmengine - INFO - Epoch(train) [34][140/196]  lr: 8.0000e-03  eta: 0:00:41  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3093
+02/08 16:39:11 - mmengine - INFO - Epoch(train) [34][150/196]  lr: 8.0000e-03  eta: 0:00:41  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3480
+02/08 16:39:11 - mmengine - INFO - Epoch(train) [34][160/196]  lr: 8.0000e-03  eta: 0:00:40  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3188
+02/08 16:39:11 - mmengine - INFO - Epoch(train) [34][170/196]  lr: 8.0000e-03  eta: 0:00:40  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3441
+02/08 16:39:12 - mmengine - INFO - Epoch(train) [34][180/196]  lr: 8.0000e-03  eta: 0:00:40  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3861
+02/08 16:39:12 - mmengine - INFO - Epoch(train) [34][190/196]  lr: 8.0000e-03  eta: 0:00:39  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3409
+02/08 16:39:12 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:12 - mmengine - INFO - Saving checkpoint at 34 epochs
+02/08 16:39:12 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:39:14 - mmengine - INFO - Epoch(val) [34][10/40]    eta: 0:00:00  time: 0.0189  data_time: 0.0138  memory: 364  
+02/08 16:39:14 - mmengine - INFO - Epoch(val) [34][20/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:39:14 - mmengine - INFO - Epoch(val) [34][30/40]    eta: 0:00:00  time: 0.0186  data_time: 0.0135  memory: 257  
+02/08 16:39:14 - mmengine - INFO - Epoch(val) [34][40/40]    eta: 0:00:00  time: 0.0173  data_time: 0.0124  memory: 257  
+02/08 16:39:14 - mmengine - INFO - Epoch(val) [34][40/40]  accuracy: 83.8800
+02/08 16:39:14 - mmengine - INFO - Epoch(train) [35][ 10/196]  lr: 8.0000e-03  eta: 0:00:39  time: 0.0352  data_time: 0.0223  memory: 364  loss: 0.3262
+02/08 16:39:15 - mmengine - INFO - Epoch(train) [35][ 20/196]  lr: 8.0000e-03  eta: 0:00:38  time: 0.0350  data_time: 0.0221  memory: 364  loss: 0.3532
+02/08 16:39:15 - mmengine - INFO - Epoch(train) [35][ 30/196]  lr: 8.0000e-03  eta: 0:00:38  time: 0.0348  data_time: 0.0219  memory: 364  loss: 0.3189
+02/08 16:39:16 - mmengine - INFO - Epoch(train) [35][ 40/196]  lr: 8.0000e-03  eta: 0:00:38  time: 0.0351  data_time: 0.0222  memory: 364  loss: 0.3148
+02/08 16:39:16 - mmengine - INFO - Epoch(train) [35][ 50/196]  lr: 8.0000e-03  eta: 0:00:37  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.2967
+02/08 16:39:16 - mmengine - INFO - Epoch(train) [35][ 60/196]  lr: 8.0000e-03  eta: 0:00:37  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3051
+02/08 16:39:17 - mmengine - INFO - Epoch(train) [35][ 70/196]  lr: 8.0000e-03  eta: 0:00:37  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3134
+02/08 16:39:17 - mmengine - INFO - Epoch(train) [35][ 80/196]  lr: 8.0000e-03  eta: 0:00:36  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3289
+02/08 16:39:17 - mmengine - INFO - Epoch(train) [35][ 90/196]  lr: 8.0000e-03  eta: 0:00:36  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3176
+02/08 16:39:18 - mmengine - INFO - Epoch(train) [35][100/196]  lr: 8.0000e-03  eta: 0:00:36  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.3492
+02/08 16:39:18 - mmengine - INFO - Epoch(train) [35][110/196]  lr: 8.0000e-03  eta: 0:00:35  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3358
+02/08 16:39:18 - mmengine - INFO - Epoch(train) [35][120/196]  lr: 8.0000e-03  eta: 0:00:35  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.3064
+02/08 16:39:19 - mmengine - INFO - Epoch(train) [35][130/196]  lr: 8.0000e-03  eta: 0:00:35  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3426
+02/08 16:39:19 - mmengine - INFO - Epoch(train) [35][140/196]  lr: 8.0000e-03  eta: 0:00:34  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3366
+02/08 16:39:19 - mmengine - INFO - Epoch(train) [35][150/196]  lr: 8.0000e-03  eta: 0:00:34  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3346
+02/08 16:39:20 - mmengine - INFO - Epoch(train) [35][160/196]  lr: 8.0000e-03  eta: 0:00:34  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3257
+02/08 16:39:20 - mmengine - INFO - Epoch(train) [35][170/196]  lr: 8.0000e-03  eta: 0:00:33  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3211
+02/08 16:39:20 - mmengine - INFO - Epoch(train) [35][180/196]  lr: 8.0000e-03  eta: 0:00:33  time: 0.0339  data_time: 0.0212  memory: 364  loss: 0.3424
+02/08 16:39:21 - mmengine - INFO - Epoch(train) [35][190/196]  lr: 8.0000e-03  eta: 0:00:33  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3255
+02/08 16:39:21 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:21 - mmengine - INFO - Saving checkpoint at 35 epochs
+02/08 16:39:21 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:39:22 - mmengine - INFO - Epoch(val) [35][10/40]    eta: 0:00:00  time: 0.0186  data_time: 0.0134  memory: 364  
+02/08 16:39:22 - mmengine - INFO - Epoch(val) [35][20/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:39:22 - mmengine - INFO - Epoch(val) [35][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 257  
+02/08 16:39:23 - mmengine - INFO - Epoch(val) [35][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:39:23 - mmengine - INFO - Epoch(val) [35][40/40]  accuracy: 82.3800
+02/08 16:39:23 - mmengine - INFO - Epoch(train) [36][ 10/196]  lr: 8.0000e-03  eta: 0:00:32  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3084
+02/08 16:39:23 - mmengine - INFO - Epoch(train) [36][ 20/196]  lr: 8.0000e-03  eta: 0:00:32  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.2919
+02/08 16:39:24 - mmengine - INFO - Epoch(train) [36][ 30/196]  lr: 8.0000e-03  eta: 0:00:31  time: 0.0342  data_time: 0.0214  memory: 364  loss: 0.3112
+02/08 16:39:24 - mmengine - INFO - Epoch(train) [36][ 40/196]  lr: 8.0000e-03  eta: 0:00:31  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3239
+02/08 16:39:24 - mmengine - INFO - Epoch(train) [36][ 50/196]  lr: 8.0000e-03  eta: 0:00:31  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.2990
+02/08 16:39:25 - mmengine - INFO - Epoch(train) [36][ 60/196]  lr: 8.0000e-03  eta: 0:00:30  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3159
+02/08 16:39:25 - mmengine - INFO - Epoch(train) [36][ 70/196]  lr: 8.0000e-03  eta: 0:00:30  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3018
+02/08 16:39:25 - mmengine - INFO - Epoch(train) [36][ 80/196]  lr: 8.0000e-03  eta: 0:00:30  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3051
+02/08 16:39:26 - mmengine - INFO - Epoch(train) [36][ 90/196]  lr: 8.0000e-03  eta: 0:00:29  time: 0.0364  data_time: 0.0237  memory: 364  loss: 0.3162
+02/08 16:39:26 - mmengine - INFO - Epoch(train) [36][100/196]  lr: 8.0000e-03  eta: 0:00:29  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3021
+02/08 16:39:26 - mmengine - INFO - Epoch(train) [36][110/196]  lr: 8.0000e-03  eta: 0:00:29  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3237
+02/08 16:39:27 - mmengine - INFO - Epoch(train) [36][120/196]  lr: 8.0000e-03  eta: 0:00:28  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3089
+02/08 16:39:27 - mmengine - INFO - Epoch(train) [36][130/196]  lr: 8.0000e-03  eta: 0:00:28  time: 0.0332  data_time: 0.0205  memory: 364  loss: 0.3248
+02/08 16:39:27 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:27 - mmengine - INFO - Epoch(train) [36][140/196]  lr: 8.0000e-03  eta: 0:00:28  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3515
+02/08 16:39:28 - mmengine - INFO - Epoch(train) [36][150/196]  lr: 8.0000e-03  eta: 0:00:27  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3133
+02/08 16:39:28 - mmengine - INFO - Epoch(train) [36][160/196]  lr: 8.0000e-03  eta: 0:00:27  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3235
+02/08 16:39:28 - mmengine - INFO - Epoch(train) [36][170/196]  lr: 8.0000e-03  eta: 0:00:27  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3590
+02/08 16:39:29 - mmengine - INFO - Epoch(train) [36][180/196]  lr: 8.0000e-03  eta: 0:00:26  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3348
+02/08 16:39:29 - mmengine - INFO - Epoch(train) [36][190/196]  lr: 8.0000e-03  eta: 0:00:26  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3043
+02/08 16:39:29 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:29 - mmengine - INFO - Saving checkpoint at 36 epochs
+02/08 16:39:29 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:39:30 - mmengine - INFO - Epoch(val) [36][10/40]    eta: 0:00:00  time: 0.0186  data_time: 0.0135  memory: 364  
+02/08 16:39:31 - mmengine - INFO - Epoch(val) [36][20/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:39:31 - mmengine - INFO - Epoch(val) [36][30/40]    eta: 0:00:00  time: 0.0179  data_time: 0.0129  memory: 257  
+02/08 16:39:31 - mmengine - INFO - Epoch(val) [36][40/40]    eta: 0:00:00  time: 0.0164  data_time: 0.0117  memory: 257  
+02/08 16:39:31 - mmengine - INFO - Epoch(val) [36][40/40]  accuracy: 83.6700
+02/08 16:39:31 - mmengine - INFO - Epoch(train) [37][ 10/196]  lr: 8.0000e-03  eta: 0:00:26  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3005
+02/08 16:39:32 - mmengine - INFO - Epoch(train) [37][ 20/196]  lr: 8.0000e-03  eta: 0:00:25  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3121
+02/08 16:39:32 - mmengine - INFO - Epoch(train) [37][ 30/196]  lr: 8.0000e-03  eta: 0:00:25  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3003
+02/08 16:39:32 - mmengine - INFO - Epoch(train) [37][ 40/196]  lr: 8.0000e-03  eta: 0:00:25  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3236
+02/08 16:39:33 - mmengine - INFO - Epoch(train) [37][ 50/196]  lr: 8.0000e-03  eta: 0:00:24  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3255
+02/08 16:39:33 - mmengine - INFO - Epoch(train) [37][ 60/196]  lr: 8.0000e-03  eta: 0:00:24  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3138
+02/08 16:39:33 - mmengine - INFO - Epoch(train) [37][ 70/196]  lr: 8.0000e-03  eta: 0:00:24  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3252
+02/08 16:39:34 - mmengine - INFO - Epoch(train) [37][ 80/196]  lr: 8.0000e-03  eta: 0:00:23  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.2994
+02/08 16:39:34 - mmengine - INFO - Epoch(train) [37][ 90/196]  lr: 8.0000e-03  eta: 0:00:23  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3317
+02/08 16:39:34 - mmengine - INFO - Epoch(train) [37][100/196]  lr: 8.0000e-03  eta: 0:00:23  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3117
+02/08 16:39:35 - mmengine - INFO - Epoch(train) [37][110/196]  lr: 8.0000e-03  eta: 0:00:22  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3158
+02/08 16:39:35 - mmengine - INFO - Epoch(train) [37][120/196]  lr: 8.0000e-03  eta: 0:00:22  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3374
+02/08 16:39:35 - mmengine - INFO - Epoch(train) [37][130/196]  lr: 8.0000e-03  eta: 0:00:21  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3222
+02/08 16:39:36 - mmengine - INFO - Epoch(train) [37][140/196]  lr: 8.0000e-03  eta: 0:00:21  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3248
+02/08 16:39:36 - mmengine - INFO - Epoch(train) [37][150/196]  lr: 8.0000e-03  eta: 0:00:21  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3349
+02/08 16:39:36 - mmengine - INFO - Epoch(train) [37][160/196]  lr: 8.0000e-03  eta: 0:00:20  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3179
+02/08 16:39:37 - mmengine - INFO - Epoch(train) [37][170/196]  lr: 8.0000e-03  eta: 0:00:20  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3205
+02/08 16:39:37 - mmengine - INFO - Epoch(train) [37][180/196]  lr: 8.0000e-03  eta: 0:00:20  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3233
+02/08 16:39:37 - mmengine - INFO - Epoch(train) [37][190/196]  lr: 8.0000e-03  eta: 0:00:19  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.3233
+02/08 16:39:38 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:38 - mmengine - INFO - Saving checkpoint at 37 epochs
+02/08 16:39:38 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:39:39 - mmengine - INFO - Epoch(val) [37][10/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 364  
+02/08 16:39:39 - mmengine - INFO - Epoch(val) [37][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0131  memory: 257  
+02/08 16:39:39 - mmengine - INFO - Epoch(val) [37][30/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:39:39 - mmengine - INFO - Epoch(val) [37][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0119  memory: 257  
+02/08 16:39:39 - mmengine - INFO - Epoch(val) [37][40/40]  accuracy: 83.7400
+02/08 16:39:40 - mmengine - INFO - Epoch(train) [38][ 10/196]  lr: 8.0000e-03  eta: 0:00:19  time: 0.0341  data_time: 0.0213  memory: 364  loss: 0.2782
+02/08 16:39:40 - mmengine - INFO - Epoch(train) [38][ 20/196]  lr: 8.0000e-03  eta: 0:00:19  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3036
+02/08 16:39:40 - mmengine - INFO - Epoch(train) [38][ 30/196]  lr: 8.0000e-03  eta: 0:00:18  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.2950
+02/08 16:39:41 - mmengine - INFO - Epoch(train) [38][ 40/196]  lr: 8.0000e-03  eta: 0:00:18  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3032
+02/08 16:39:41 - mmengine - INFO - Epoch(train) [38][ 50/196]  lr: 8.0000e-03  eta: 0:00:18  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3014
+02/08 16:39:41 - mmengine - INFO - Epoch(train) [38][ 60/196]  lr: 8.0000e-03  eta: 0:00:17  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.2924
+02/08 16:39:42 - mmengine - INFO - Epoch(train) [38][ 70/196]  lr: 8.0000e-03  eta: 0:00:17  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3073
+02/08 16:39:42 - mmengine - INFO - Epoch(train) [38][ 80/196]  lr: 8.0000e-03  eta: 0:00:17  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.2924
+02/08 16:39:42 - mmengine - INFO - Epoch(train) [38][ 90/196]  lr: 8.0000e-03  eta: 0:00:16  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3126
+02/08 16:39:43 - mmengine - INFO - Epoch(train) [38][100/196]  lr: 8.0000e-03  eta: 0:00:16  time: 0.0344  data_time: 0.0216  memory: 364  loss: 0.3136
+02/08 16:39:43 - mmengine - INFO - Epoch(train) [38][110/196]  lr: 8.0000e-03  eta: 0:00:16  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3009
+02/08 16:39:43 - mmengine - INFO - Epoch(train) [38][120/196]  lr: 8.0000e-03  eta: 0:00:15  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.2922
+02/08 16:39:44 - mmengine - INFO - Epoch(train) [38][130/196]  lr: 8.0000e-03  eta: 0:00:15  time: 0.0342  data_time: 0.0214  memory: 364  loss: 0.2985
+02/08 16:39:44 - mmengine - INFO - Epoch(train) [38][140/196]  lr: 8.0000e-03  eta: 0:00:15  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3539
+02/08 16:39:44 - mmengine - INFO - Epoch(train) [38][150/196]  lr: 8.0000e-03  eta: 0:00:14  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3002
+02/08 16:39:45 - mmengine - INFO - Epoch(train) [38][160/196]  lr: 8.0000e-03  eta: 0:00:14  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3138
+02/08 16:39:45 - mmengine - INFO - Epoch(train) [38][170/196]  lr: 8.0000e-03  eta: 0:00:14  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.2855
+02/08 16:39:45 - mmengine - INFO - Epoch(train) [38][180/196]  lr: 8.0000e-03  eta: 0:00:13  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3286
+02/08 16:39:46 - mmengine - INFO - Epoch(train) [38][190/196]  lr: 8.0000e-03  eta: 0:00:13  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.2962
+02/08 16:39:46 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:46 - mmengine - INFO - Saving checkpoint at 38 epochs
+02/08 16:39:46 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:39:47 - mmengine - INFO - Epoch(val) [38][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 364  
+02/08 16:39:47 - mmengine - INFO - Epoch(val) [38][20/40]    eta: 0:00:00  time: 0.0207  data_time: 0.0156  memory: 257  
+02/08 16:39:48 - mmengine - INFO - Epoch(val) [38][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0130  memory: 257  
+02/08 16:39:48 - mmengine - INFO - Epoch(val) [38][40/40]    eta: 0:00:00  time: 0.0168  data_time: 0.0121  memory: 257  
+02/08 16:39:48 - mmengine - INFO - Epoch(val) [38][40/40]  accuracy: 83.2300
+02/08 16:39:48 - mmengine - INFO - Epoch(train) [39][ 10/196]  lr: 8.0000e-03  eta: 0:00:12  time: 0.0340  data_time: 0.0213  memory: 364  loss: 0.2959
+02/08 16:39:48 - mmengine - INFO - Epoch(train) [39][ 20/196]  lr: 8.0000e-03  eta: 0:00:12  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.2972
+02/08 16:39:49 - mmengine - INFO - Epoch(train) [39][ 30/196]  lr: 8.0000e-03  eta: 0:00:12  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.2832
+02/08 16:39:49 - mmengine - INFO - Epoch(train) [39][ 40/196]  lr: 8.0000e-03  eta: 0:00:11  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.2901
+02/08 16:39:49 - mmengine - INFO - Epoch(train) [39][ 50/196]  lr: 8.0000e-03  eta: 0:00:11  time: 0.0333  data_time: 0.0206  memory: 364  loss: 0.3165
+02/08 16:39:50 - mmengine - INFO - Epoch(train) [39][ 60/196]  lr: 8.0000e-03  eta: 0:00:11  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.2889
+02/08 16:39:50 - mmengine - INFO - Epoch(train) [39][ 70/196]  lr: 8.0000e-03  eta: 0:00:10  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.2905
+02/08 16:39:50 - mmengine - INFO - Epoch(train) [39][ 80/196]  lr: 8.0000e-03  eta: 0:00:10  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3206
+02/08 16:39:51 - mmengine - INFO - Epoch(train) [39][ 90/196]  lr: 8.0000e-03  eta: 0:00:10  time: 0.0341  data_time: 0.0213  memory: 364  loss: 0.3403
+02/08 16:39:51 - mmengine - INFO - Epoch(train) [39][100/196]  lr: 8.0000e-03  eta: 0:00:09  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.2938
+02/08 16:39:51 - mmengine - INFO - Epoch(train) [39][110/196]  lr: 8.0000e-03  eta: 0:00:09  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3049
+02/08 16:39:52 - mmengine - INFO - Epoch(train) [39][120/196]  lr: 8.0000e-03  eta: 0:00:09  time: 0.0351  data_time: 0.0223  memory: 364  loss: 0.2942
+02/08 16:39:52 - mmengine - INFO - Epoch(train) [39][130/196]  lr: 8.0000e-03  eta: 0:00:08  time: 0.0337  data_time: 0.0210  memory: 364  loss: 0.3206
+02/08 16:39:53 - mmengine - INFO - Epoch(train) [39][140/196]  lr: 8.0000e-03  eta: 0:00:08  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.2895
+02/08 16:39:53 - mmengine - INFO - Epoch(train) [39][150/196]  lr: 8.0000e-03  eta: 0:00:08  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.2968
+02/08 16:39:53 - mmengine - INFO - Epoch(train) [39][160/196]  lr: 8.0000e-03  eta: 0:00:07  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3118
+02/08 16:39:54 - mmengine - INFO - Epoch(train) [39][170/196]  lr: 8.0000e-03  eta: 0:00:07  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.2981
+02/08 16:39:54 - mmengine - INFO - Epoch(train) [39][180/196]  lr: 8.0000e-03  eta: 0:00:07  time: 0.0349  data_time: 0.0221  memory: 364  loss: 0.3167
+02/08 16:39:54 - mmengine - INFO - Epoch(train) [39][190/196]  lr: 8.0000e-03  eta: 0:00:06  time: 0.0334  data_time: 0.0206  memory: 364  loss: 0.3423
+02/08 16:39:54 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:39:54 - mmengine - INFO - Saving checkpoint at 39 epochs
+02/08 16:39:54 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:39:56 - mmengine - INFO - Epoch(val) [39][10/40]    eta: 0:00:00  time: 0.0183  data_time: 0.0132  memory: 364  
+02/08 16:39:56 - mmengine - INFO - Epoch(val) [39][20/40]    eta: 0:00:00  time: 0.0182  data_time: 0.0132  memory: 257  
+02/08 16:39:56 - mmengine - INFO - Epoch(val) [39][30/40]    eta: 0:00:00  time: 0.0181  data_time: 0.0131  memory: 257  
+02/08 16:39:56 - mmengine - INFO - Epoch(val) [39][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0119  memory: 257  
+02/08 16:39:56 - mmengine - INFO - Epoch(val) [39][40/40]  accuracy: 81.7100
+02/08 16:39:57 - mmengine - INFO - Epoch(train) [40][ 10/196]  lr: 8.0000e-03  eta: 0:00:06  time: 0.0338  data_time: 0.0211  memory: 364  loss: 0.2986
+02/08 16:39:57 - mmengine - INFO - Epoch(train) [40][ 20/196]  lr: 8.0000e-03  eta: 0:00:05  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.2833
+02/08 16:39:57 - mmengine - INFO - Epoch(train) [40][ 30/196]  lr: 8.0000e-03  eta: 0:00:05  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.2891
+02/08 16:39:58 - mmengine - INFO - Epoch(train) [40][ 40/196]  lr: 8.0000e-03  eta: 0:00:05  time: 0.0334  data_time: 0.0207  memory: 364  loss: 0.3144
+02/08 16:39:58 - mmengine - INFO - Epoch(train) [40][ 50/196]  lr: 8.0000e-03  eta: 0:00:04  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.2845
+02/08 16:39:58 - mmengine - INFO - Epoch(train) [40][ 60/196]  lr: 8.0000e-03  eta: 0:00:04  time: 0.0335  data_time: 0.0207  memory: 364  loss: 0.3059
+02/08 16:39:59 - mmengine - INFO - Epoch(train) [40][ 70/196]  lr: 8.0000e-03  eta: 0:00:04  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.3159
+02/08 16:39:59 - mmengine - INFO - Epoch(train) [40][ 80/196]  lr: 8.0000e-03  eta: 0:00:03  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3038
+02/08 16:39:59 - mmengine - INFO - Epoch(train) [40][ 90/196]  lr: 8.0000e-03  eta: 0:00:03  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.2601
+02/08 16:40:00 - mmengine - INFO - Epoch(train) [40][100/196]  lr: 8.0000e-03  eta: 0:00:03  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.2857
+02/08 16:40:00 - mmengine - INFO - Epoch(train) [40][110/196]  lr: 8.0000e-03  eta: 0:00:02  time: 0.0339  data_time: 0.0211  memory: 364  loss: 0.2994
+02/08 16:40:00 - mmengine - INFO - Epoch(train) [40][120/196]  lr: 8.0000e-03  eta: 0:00:02  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3279
+02/08 16:40:01 - mmengine - INFO - Epoch(train) [40][130/196]  lr: 8.0000e-03  eta: 0:00:02  time: 0.0337  data_time: 0.0209  memory: 364  loss: 0.3023
+02/08 16:40:01 - mmengine - INFO - Epoch(train) [40][140/196]  lr: 8.0000e-03  eta: 0:00:01  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.3115
+02/08 16:40:01 - mmengine - INFO - Epoch(train) [40][150/196]  lr: 8.0000e-03  eta: 0:00:01  time: 0.0336  data_time: 0.0208  memory: 364  loss: 0.3192
+02/08 16:40:02 - mmengine - INFO - Epoch(train) [40][160/196]  lr: 8.0000e-03  eta: 0:00:01  time: 0.0335  data_time: 0.0208  memory: 364  loss: 0.2893
+02/08 16:40:02 - mmengine - INFO - Epoch(train) [40][170/196]  lr: 8.0000e-03  eta: 0:00:00  time: 0.0338  data_time: 0.0210  memory: 364  loss: 0.3212
+02/08 16:40:02 - mmengine - INFO - Epoch(train) [40][180/196]  lr: 8.0000e-03  eta: 0:00:00  time: 0.0336  data_time: 0.0209  memory: 364  loss: 0.3057
+02/08 16:40:03 - mmengine - INFO - Epoch(train) [40][190/196]  lr: 8.0000e-03  eta: 0:00:00  time: 0.0340  data_time: 0.0212  memory: 364  loss: 0.3001
+02/08 16:40:03 - mmengine - INFO - Exp name: 20230208_163425
+02/08 16:40:03 - mmengine - INFO - Saving checkpoint at 40 epochs
+02/08 16:40:03 - mmengine - WARNING - `save_param_scheduler` is True but `self.param_schedulers` is None, so skip saving parameter schedulers
+02/08 16:40:04 - mmengine - INFO - Epoch(val) [40][10/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 364  
+02/08 16:40:04 - mmengine - INFO - Epoch(val) [40][20/40]    eta: 0:00:00  time: 0.0180  data_time: 0.0130  memory: 257  
+02/08 16:40:04 - mmengine - INFO - Epoch(val) [40][30/40]    eta: 0:00:00  time: 0.0184  data_time: 0.0133  memory: 257  
+02/08 16:40:05 - mmengine - INFO - Epoch(val) [40][40/40]    eta: 0:00:00  time: 0.0165  data_time: 0.0118  memory: 257  
+02/08 16:40:05 - mmengine - INFO - Epoch(val) [40][40/40]  accuracy: 83.3700
+2023年 02月 08日 星期三 16:40:05 CST

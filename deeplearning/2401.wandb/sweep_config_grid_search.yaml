@@ -1,0 +1,28 @@
+program: LeNet_FashionMNIST_wandb_sweep_cmd.py
+method: grid
+metric:
+  # goal: minimize
+  # name: eval/val_loss
+  goal: maximize
+  name: eval/val_acc
+parameters:
+  act_layer:
+    values: ['Sigmoid', 'ReLU']
+  lr:
+    values: [0.005, 0.01, 0.015]
+  batch_size:
+    values: [128, 256, 512]
+  epochs:
+    values: [20, 25]
+early_terminate:
+  type: hyperband
+  s: 3
+  eta: 3
+  max_iter: 81
+command:
+  - ${env}
+  - python
+  - ${program}
+  # - "-b"
+  # - argparse param
+  - ${args} # sweep param 
