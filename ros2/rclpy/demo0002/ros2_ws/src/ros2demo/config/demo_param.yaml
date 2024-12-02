@@ -1,0 +1,21 @@
+dynamic_param_node:
+  ros__parameters:
+    param_bool: False
+    param_int: 1
+    param_float: 10.0
+    param_str: config_str
+
+    param_int_arr: [2, 4, 6, 8]
+    param_str_arr: ['str2', 'str4']
+    
+    param_dict:
+      int_list: [2, 4, 6, 8]
+      str: "cccddd"
+
+    not_declare_para: '节点内多余的参数不会报错'
+  # 节点外其他位置的参数都会报错
+  # other1_cfg: 0
+# other2_cfg:
+#   aaa: 'aaa'
+#   bbb: 1
+#   ccc: True

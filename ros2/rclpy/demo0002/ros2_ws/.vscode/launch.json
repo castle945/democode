@@ -1,0 +1,31 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "ROS: Launch",
+            "request": "launch",
+            "target": "${workspaceFolder}/install/ros2demo/share/ros2demo/launch/demo.launch.py",
+            "launch": [
+                "rviz", // 调试 rviz 等要 apt install -y gdb
+                "gz",
+                "gzclient",
+                "gzserver"
+            ],
+            "type": "ros"
+        },
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": "${command:pickArgs}", // 如果有命令行传入给该节点的参数
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/install/ros2demo/lib/python3.10/site-packages",
+            },
+        },
+    ]
+}

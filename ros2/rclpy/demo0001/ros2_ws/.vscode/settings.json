@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/datasets/workspace/codevault/democode/ros2/rclpy/demo0001/ros2_ws/install/ros2demo/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/datasets/workspace/codevault/democode/ros2/rclpy/demo0001/ros2_ws/install/ros2demo/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}

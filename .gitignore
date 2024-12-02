@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+**.egg-info**
+build/
+dist/
+
+# Node
+node_modules/
+
+# ROS
+devel/
+install/
+log/
+
+# Workspace
+output/
+.trash/
